@@ -1,19 +1,22 @@
 import React from 'react'
+import PageLogo from '../assets/images/ZoomAway.png'
+import { NavItems } from './NavbarItems'
 
 function Navbar() {
   return (
-    <div className='navbar'>
-         <header className="bg-white">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">ZoomAway</span>
-            <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
-          </a>
-          </div>
-          </nav>
-          </header>
-    </div>
+    <header className="bg-white">
+      <nav className="navbarflex max-w-7xl items-center justify-between" >
+        <div className='logoTitle flex lg:flex-1'>
+        <img className="h-24 w-24"src={PageLogo} alt='car rental logo' />
+        <h1 className="appName pt-7">Zoom<span>Away</span></h1>
+        </div>
+        <div className="navbarItems">
+          <ul>
+            {NavItems.map((headerItems =>)}
+          </ul>
+        </div>
+      </nav>
+    </header>
   )
 }
 
