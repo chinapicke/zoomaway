@@ -1,51 +1,53 @@
 export const NavItems = [
     {
-        id:1,
+        id:'homeOption',
         title:'Home',
         url:'#',
         cName:'navbar_items'
     },
     {
-        id:2,
+        id:'aboutOption',
         title:'About',
         url:'#',
         cName:'navbar_items'
     },
     {
-        id:3,
-        title:'Vechiles',
+        id:'vechileOption',
+        title:'Vehicles',
         url:'#',
         cName:'navbar_items'
     },
     {
-        id:4,
+        id:'teamOption',
         title:'Meet the Team',
         url:'#',
         cName:'navbar_items'
     },
     {
-        id:5,
+        id:'testimonailsOption',
         title:'Testimonials',
         url:'#',
         cName:'navbar_items'
     },
     {
-        id:6,
+        id:'contactOption',
         title:'Contact Us',
         url:'#',
         cName:'navbar_items'
-    },
+    }
+]
+
+export const NavbarBtns =[
     {
-        id:7,
+        id:'signinOption',
         title:'Sign in',
         url:'#',
-        cName:'navbar_items'
+        cName:'button_items'
     },
     {
-        id:8,
+        id:'registerOption',
         title:'Register',
         url:'#',
-        cName:'navbar_items'
+        cName:'button_items'
     },
-
 ]
