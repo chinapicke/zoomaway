@@ -6,25 +6,22 @@ import Vechiles from './components/Vechiles';
 import MeetTeam from './components/MeetTeam';
 import Testimonals from './components/Testimonals';
 import Contact from './components/Contact';
-import { Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-
-    <>
+    <Router>
       <Navbar />
-    </>
-     
-      /* <Routes>
+      <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<About />} />
           <Route path="/vechiles" element={<Vechiles />} />
           <Route path="/meettheteam" element={<MeetTeam />} />
           <Route path="/testimonals" element={<Testimonals />} />
           <Route path="/contact" element={<Contact />} />
-         </Routes> */
-
-  );
+         </Routes>
+    </Router>
+  )
 }
 
 export default App;

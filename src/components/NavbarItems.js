@@ -2,7 +2,7 @@ export const NavItems = [
     {
         id:'homeOption',
         title:'Home',
-        url:'#',
+        url:'/',
         cName:'navbar_items'
     },
     {
