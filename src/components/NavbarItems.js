@@ -36,18 +36,3 @@ export const NavItems = [
         cName:'navbar_items'
     }
 ]
-
-export const NavbarBtns =[
-    {
-        id:'signinOption',
-        title:'Sign in',
-        url:'#',
-        cName:'button_items'
-    },
-    {
-        id:'registerOption',
-        title:'Register',
-        url:'#',
-        cName:'button_items'
-    },
-]

@@ -1,25 +1,39 @@
 import React from 'react'
-import PageLogo from '../assets/images/ZoomAway.png'
-import { NavItems, NavbarBtns } from './NavbarItems'
+import PageLogo from '../assets/images/zoomaway.png'
+import { NavItems } from './NavbarItems'
 import '../assets/styles/Navbar.css'
 
 function Navbar() {
   return (
     <header className="bg-white">
-      <nav className="navbarflex max-w-7xl items-center justify-between" >
-        <div className='logoTitle flex lg:flex-1'>
-          <img className="h-24 w-24" src={PageLogo} alt='car rental logo' />
-          <h1 className="appName pt-7">Zoom<span>Away</span></h1>
-          <div className="navbarMenu pt-7">
-            <ul className='navbarItems'>
+      <nav class="bg-white pt-3">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+          <a href="https://flowbite.com" class="flex items-center">
+            <img src={PageLogo} class=" h-20 lg:h-30" alt="Flowbite Logo" />
+            <span class="self-center text-lg font-semibold whitespace-nowrap">ZoomAway</span>
+          </a>
+          <div class="flex items-center lg:order-2">
+            <a href="#" class=" focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-md px-4 lg:px-5 py-2 lg:py-2.5 mr-2 ">Sign up</a>
+            <a href="#" class=" focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-md px-4 lg:px-5 py-2 lg:py-2.5 mr-2 da">Register</a>
+          </div>
+          <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+            <ul className='navbarItems flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 '>
               {NavItems.map((headerItems) =>
-                <li><a className={headerItems.cName} href={headerItems.url} id={headerItems.id}>{headerItems.title}</a></li>
+                <li key={headerItems.cName} className='md-ml10 text-md'>
+                  <a
+                    href={headerItems.url}
+                    id={headerItems.id}
+                  >{headerItems.title}
+                  </a></li>
 
               )}
             </ul>
-            {NavbarBtns.map((buttonItems) =>
-            <button className={buttonItems.cName} href={buttonItems.url} id={buttonItems.id}>{buttonItems.title}</button>
-              )}
+            {/* {NavbarBtns.map((buttonItems) =>
+            <button className={buttonItems.cName} 
+            href={buttonItems.url} 
+            id={buttonItems.id}>
+            {buttonItems.title}
+            </button> */}
           </div>
         </div>
       </nav>
