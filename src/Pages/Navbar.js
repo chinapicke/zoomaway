@@ -1,6 +1,6 @@
 import React from 'react'
 import PageLogo from '../assets/images/ZMLG.png'
-import { NavItems } from './NavbarItems'
+import { NavItems } from '../components/NavbarItems'
 import '../assets/styles/Navbar.css'
 
 function Navbar() {
