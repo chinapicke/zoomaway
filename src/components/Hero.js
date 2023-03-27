@@ -6,7 +6,7 @@ function Hero() {
   return (
     <section className='heroSection'>
       <div className='heroBackground'>
-        <img src={HeroImage} alt="" class="absolute inset-0 -z-10 h-full w-full object-cover bg-center"></img>
+        <img src={HeroImage} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover bg-center"></img>
       < SearchBar />
       </div>
     </section>

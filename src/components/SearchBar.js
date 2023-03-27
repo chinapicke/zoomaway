@@ -25,10 +25,10 @@ function SearchBar() {
 
 
   return (
-    <form class="selectCarForm">
+    <form className="selectCarForm">
       <div>
         <div >
-          <label class="block">
+          <label className="block">
             Select a car
           </label>
           <select>
@@ -38,7 +38,7 @@ function SearchBar() {
       </div>
 
       <div >
-        <label class="block">
+        <label className="block">
           Pick-up Destination
         </label>
         <div>
@@ -49,7 +49,7 @@ function SearchBar() {
       </div>
 
       <div>
-        <label class="block">
+        <label className="block">
           Pick-up Date
         </label>
         <div>
@@ -60,7 +60,7 @@ function SearchBar() {
       </div>
 
       <div>
-        <label class="block">
+        <label className="block">
           Pick-up Time
         </label>
         <div>
@@ -70,10 +70,10 @@ function SearchBar() {
 
       <div>
         <div>
-          <label class="block" >
+          <label className="block" >
             Drop-off Destination
           </label>
-          <div class="relative">
+          <div className="relative">
             <select  >
               <option>London</option>
             </select>
@@ -82,7 +82,7 @@ function SearchBar() {
       </div>
 
       <div>
-        <label class="block">
+        <label className="block">
           Drop-off Date
         </label>
         <div >
@@ -93,7 +93,7 @@ function SearchBar() {
       </div>
 
       <div>
-        <label class="block">
+        <label className="block">
           Drop-off Time
         </label>
         <div>

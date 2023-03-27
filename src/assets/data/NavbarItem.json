@@ -1,0 +1,38 @@
+[
+    {
+        "id": "homeOption",
+        "title": "Home",
+        "url":"/",
+        "cName": "navbar_items"
+    },
+    {
+        "id": "aboutOption",
+        "title": "About",
+        "url": "./Pages/About",
+        "cName": "navbar_items"
+    },
+    {
+        "id": "vechileOption",
+        "title": "Vehicles",
+        "url": "./Pages/Vehicles",
+        "cName": "navbar_items"
+    },
+    {
+        "id": "teamOption",
+        "title": "Meet the Team",
+        "url": "./Pages/MeetTheTeam",
+        "cName": "navbar_items"
+    },
+    {
+        "id": "testimonailsOption",
+        "title": "Testimonials",
+        "url": "./Pages/Testimonials",
+        "cName": "navbar_items"
+    },
+    {
+        "id": "contactOption",
+        "title": "Contact Us",
+        "url": "/Pages/Contact",
+        "cName": "navbar_items"
+    }
+]
