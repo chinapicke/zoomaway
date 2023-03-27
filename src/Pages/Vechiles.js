@@ -1,69 +1,28 @@
 import React from 'react'
 import { useState } from 'react'
-import VechileCard from '../components/VechileSpecs'
+// import VechileCard from '../components/VechileSpecs'
 import { carsAvailable } from '../assets/data/cars'
-import Mini from '../assets/images/coop.png'
-import Corsa from '../assets/images/corsa.png'
-import Focus from '../assets/images/focus.png'
-import Soul from '../assets/images/kia.png'
-import Juke from '../assets/images/nissan.png'
-import Polo from '../assets/images/polo.png'
-import Priaus from '../assets/images/toyota.png'
-import { FormControlUnstyled } from '@mui/base'
+import '../assets/styles/Vechiles.css'
 
 function Vechiles() {
-    // let carImage;
-    // const handleThis = (event) => {
-    //    console.log(event.currentTarget.id)
-    //    if (event.currentTarget.id==="Vauxhall"){
-    //     console.log('You liked Corsa')
-    //     carImage = Corsa;
-
-    //    }
-    //    if (event.currentTarget.id==="Ford"){
-    //     console.log('You liked Focus')
-    //     carImage= Focus;
-    //    }
-    //    if (event.currentTarget.id==="Nissan"){
-    //     console.log('You liked Juke')
-    //     carImage= Juke;
-    //    }
-    //    if (event.currentTarget.id==="Volkswagen"){
-    //     console.log('You liked Polo')
-    //     carImage= Polo;
-    //    }
-    //    if (event.currentTarget.id==="Cooper"){
-    //     console.log('You liked Cooper')
-    //     carImage= Mini;
-    //    }
-    //    if (event.currentTarget.id==="Kia"){
-    //     console.log('You liked Soul')
-    //     carImage= Soul;
-    //    }
-    //    if (event.currentTarget.id==="Toyota"){
-    //     console.log('You liked Priaus')
-    //     carImage= Priaus;
-    //    }
-    // }
-
-    const [toggle, setToggle] = useState();
-    const [visible, setVisible] = useState(true);
+    const [toggle, setToggle] = useState(1);
+    // const [visible, setVisible] = useState(true);
 
     return (
-        <div className="wholeVechilePageGrid ">
-            {carsAvailable.map(({ img, title, key, model }) => {
+        <div className="wholeVechilePageGrid grid grid-cols-3">
+            {carsAvailable.map(({ img, title, key, model, make, doors, seats, year, transmission, fuel, pricePd }) => {
                 return (
                     <>
                         <div className='vechileTypes'>
                             <button onClick={() => {
                                 setToggle(key);
-                                setVisible(false)
+                                // setVisible(false)
                             }}>{title}</button>
                         </div>
-                        <div className="img">
-                            {visible && key === "1" ? (
+                        <div className="carimg">
+                            {/* {visible && key === "1" ? (
                                 <img src={img} key={key} className="photo" />
-                            ) : null}
+                            ) : null} */}
                             {toggle === key ? (
                                 <>
                                     <img src={img} key={key} className="photo" />
@@ -71,6 +30,144 @@ function Vechiles() {
                             ) : null}
                         </div>
                         <div>
+                            <div className='vechileCard grid grid-cols-'>
+                                <div className='carSpecs'>
+                                    {/* {visible && key === "1" ? (
+                                        <table className="w-full ">
+                                            <caption className="p-5 text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+                                                Price per day: £{pricePd}
+                                            </caption>
+                                            <tbody>
+                                                <tr className="bg-gray-600">
+                                                    <th scope="row" className="px-6 py-4 ">
+                                                        Make
+                                                    </th>
+                                                    <td className="px-6 py-4">
+                                                        {make}
+                                                    </td>
+                                                </tr>
+                                                <tr className="bg-gray-600">
+                                                    <th scope="row" className="px-6 py-4">
+                                                        Model
+                                                    </th>
+                                                    <td className="px-6 py-4">
+                                                        {model}
+                                                    </td>
+                                                </tr>
+                                                <tr className="bg-gray-600">
+                                                    <th scope="row" className="px-6 py-4">
+                                                        Doors
+                                                    </th>
+                                                    <td className="px-6 py-4">
+                                                        {doors}
+                                                    </td>
+                                                </tr>
+                                                <tr className="bg-gray-600">
+                                                    <th scope="row" className="px-6 py-4">
+                                                        Seats
+                                                    </th>
+                                                    <td className="px-6 py-4">
+                                                        {seats}
+                                                    </td>
+                                                </tr>
+                                                <tr className="bg-gray-600">
+                                                    <th scope="row" className="px-6 py-4">
+                                                        Year
+                                                    </th>
+                                                    <td className="px-6 py-4">
+                                                        {year}
+                                                    </td>
+                                                </tr>
+                                                <tr className="bg-gray-600">
+                                                    <th scope="row" className="px-6 py-4">
+                                                        Transmission
+                                                    </th>
+                                                    <td className="px-6 py-4">
+                                                        {transmission}
+                                                    </td>
+                                                </tr>
+                                                <tr className="bg-gray-600">
+                                                    <th scope="row" className="px-6 py-4">
+                                                        Fuel
+                                                    </th>
+                                                    <td className="px-6 py-4">
+                                                        {fuel}
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    ) : null} */}
+                                    {toggle === key ? (
+                                        <>
+                                                                                <table className="w-full ">
+                                            <caption className="p-5 text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+                                                Price per day: £{pricePd}
+                                            </caption>
+                                            <tbody>
+                                                <tr className="bg-gray-600">
+                                                    <th scope="row" className="px-6 py-4 ">
+                                                        Make
+                                                    </th>
+                                                    <td className="px-6 py-4">
+                                                        {make}
+                                                    </td>
+                                                </tr>
+                                                <tr className="bg-gray-600">
+                                                    <th scope="row" className="px-6 py-4">
+                                                        Model
+                                                    </th>
+                                                    <td className="px-6 py-4">
+                                                        {model}
+                                                    </td>
+                                                </tr>
+                                                <tr className="bg-gray-600">
+                                                    <th scope="row" className="px-6 py-4">
+                                                        Doors
+                                                    </th>
+                                                    <td className="px-6 py-4">
+                                                        {doors}
+                                                    </td>
+                                                </tr>
+                                                <tr className="bg-gray-600">
+                                                    <th scope="row" className="px-6 py-4">
+                                                        Seats
+                                                    </th>
+                                                    <td className="px-6 py-4">
+                                                        {seats}
+                                                    </td>
+                                                </tr>
+                                                <tr className="bg-gray-600">
+                                                    <th scope="row" className="px-6 py-4">
+                                                        Year
+                                                    </th>
+                                                    <td className="px-6 py-4">
+                                                        {year}
+                                                    </td>
+                                                </tr>
+                                                <tr className="bg-gray-600">
+                                                    <th scope="row" className="px-6 py-4">
+                                                        Transmission
+                                                    </th>
+                                                    <td className="px-6 py-4">
+                                                        {transmission}
+                                                    </td>
+                                                </tr>
+                                                <tr className="bg-gray-600">
+                                                    <th scope="row" className="px-6 py-4">
+                                                        Fuel
+                                                    </th>
+                                                    <td className="px-6 py-4">
+                                                        {fuel}
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </>
+                                    ) : null}
+                                </div>
+                            </div>
+
 
                         </div>
 
