@@ -1,9 +1,8 @@
 import './App.css';
 import Navbar from './Pages/Navbar';
 import Homepage from './Pages/Homepage';
-// import Vechiles from './Pages/Vechiles';
-import About from './Pages/About';
 import Vechiles from './Pages/Vechiles';
+import About from './Pages/About';
 // import MeetTeam from './Pages/MeetTeam';
 // import Testimonals from './Pages/Testimonals';
 // import Contact from './Pages/Contact';
@@ -11,10 +10,10 @@ import Vechiles from './Pages/Vechiles';
 
 function App() {
   return (<>
-  {/* <Navbar />
-  <Homepage />
-  <About /> */}
-  <Vechiles />
+  <Navbar />
+  <Homepage /> 
+  <About /> 
+  {/* <Vechiles />  */}
   </>
   )
 }

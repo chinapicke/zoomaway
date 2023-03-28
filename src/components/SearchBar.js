@@ -3,6 +3,40 @@ import React from 'react'
 import { useState } from 'react'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { carsAvailable } from '../assets/data/cars'
+
+
+const locations = [
+  {
+    id: 1,
+    destination: 'London Heathrow Airport T1'
+  },
+  {
+    id: 2,
+    destination: 'London Gatwick Airport T1'
+  },
+  {
+    id: 3,
+    destination: 'London Bridge'
+  },
+  {
+    id: 4,
+    destination: 'Birmingham Bullring'
+  },
+  {
+    id: 5,
+    destination: 'Birmingham International Airport'
+  },
+  {
+    id: 6,
+    destination: 'Manchester Old Trafford'
+  },
+  {
+    id: 7,
+    destination: 'Manchester Airport'
+  },
+
+]
 
 
 function SearchBar() {
@@ -23,16 +57,27 @@ function SearchBar() {
     // opens modal that confirms the order and for the user to fill in form with their details
   }
 
+  // const carSelected = (event) => {
+  //   console.log(event.target.value)
+  // };
+
 
   return (
     <form className="selectCarForm">
       <div>
-        <div >
+        <div>
           <label className="block">
             Select a car
           </label>
           <select>
-            <option>Ford</option>
+            {
+              carsAvailable.map((select) =>
+                <option
+                  value={selectCar}
+                // onChange={(e) => select}
+                >{select.make} {select.model}</option>
+              )
+            }
           </select>
         </div>
       </div>
@@ -43,7 +88,11 @@ function SearchBar() {
         </label>
         <div>
           <select >
-            <option>New Mexico</option>
+            {
+              locations.map((place, i) =>
+                <option>{place.destination}</option>
+              )
+            }
           </select>
         </div>
       </div>
@@ -74,8 +123,12 @@ function SearchBar() {
             Drop-off Destination
           </label>
           <div className="relative">
-            <select  >
-              <option>London</option>
+            <select >
+              {
+                locations.map((place, i) =>
+                  <option>{place.destination}</option>
+                )
+              }
             </select>
           </div>
         </div>
@@ -101,7 +154,7 @@ function SearchBar() {
         </div>
       </div>
 
-      <button>Submit</button>
+      <button onClick={formSubmit}>Submit</button>
     </form >
   )
 }

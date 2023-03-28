@@ -1,12 +1,12 @@
 import React from 'react'
-import Hero from '../components/Hero'
+import SearchBar from '../components/SearchBar'
 import '../assets/styles/Homepage.css'
 
 function Homepage() {
   return (
     <>
     <div className='heroBackground'>
-    <Hero></Hero>
+      <SearchBar />
     </div>
     </>
   )

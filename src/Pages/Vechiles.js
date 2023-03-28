@@ -1,9 +1,8 @@
-import { cardContentClasses } from '@mui/material'
 import React from 'react'
 import { useState } from 'react'
-// import VechileCard from '../components/VechileSpecs'
 import { carsAvailable } from '../assets/data/cars'
 import '../assets/styles/Vechiles.css'
+import Modal from '../components/Modal.js'
 
 function Vechiles() {
     // state for the carousel of car images
@@ -14,19 +13,23 @@ function Vechiles() {
     //   function to get the index of the car image 
     const handleClick = (index) => {
         console.log(index);
+    // sets index to the car.json file
         const slider = carsAvailable[index];
         const table = carsAvailable[index];
+    // changes the state when to show the image/table with the correct id
         setShow(table)
         setCarImage(slider)
 
     }
 
     return (
+        <>
         <div className="carousel">
             <div className='carImg'>
             <img src={carImage.img} height="300" width="500" alt='Main' />
             </div>
             <div>
+                {/* This shows the correct car spec when a certain car picture is picked with the id  */}
                 <h1>{show.model} {show.make}</h1>
             <table className="w-30 carSpecs">
                 <caption className="p-5 text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
@@ -101,9 +104,11 @@ function Vechiles() {
                     </>
                 )}
             </div>
-
-            {/* <img src={carsAvailable[].img} height='300' width='500' alt='Bigger'/> */}
         </div>
+        <div>
+            <Modal />
+        </div>
+        </>
     )
 }
 
