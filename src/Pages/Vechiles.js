@@ -22,12 +22,13 @@ function Vechiles() {
     }
 
     return (
-        <div className="carousel grid grid-col-2">
-            <div>
+        <div className="carousel">
+            <div className='carImg'>
             <img src={carImage.img} height="300" width="500" alt='Main' />
             </div>
             <div>
-            <table className="w-full ">
+                <h1>{show.model} {show.make}</h1>
+            <table className="w-30 carSpecs">
                 <caption className="p-5 text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
                     Price per day: £{show.pricePd}
                 </caption>
