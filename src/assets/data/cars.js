@@ -59,7 +59,7 @@ export const carsAvailable =[
         "id":5,
         "key": 5,
         "title":"MiniCoop",
-        "img":require("../images/coop.png"),
+        "img":require("../images/mini.png"),
         "model": "Mini",
         "make": "Cooper",
         "doors": 2,
