@@ -2,7 +2,7 @@ export const carsAvailable =[
     {
         "id": 1,
         "key": 1,
-        "title": "VauxhallCorsa",
+        "title": "Vauxhall Corsa",
         "img": require("../images/corsa.png"),
         "model": "Corsa",
         "make": "Vauxhall",
@@ -16,7 +16,7 @@ export const carsAvailable =[
     {
         "id": 2,
         "key": 2,        
-        "title": "FordFocus",
+        "title": "Ford Focus",
         "img": require("../images/focus.png"),
         "model": "Focus",
         "make": "Ford",
@@ -30,7 +30,7 @@ export const carsAvailable =[
     {
         "id":3,
         "key": 3,
-        "title":"NissanJuke",
+        "title":"Nissan Juke",
         "img": require("../images/nissan.png"),
         "model": "Juke",
         "make": "Nissan",
@@ -44,7 +44,7 @@ export const carsAvailable =[
     {
         "id":4,
         "key": 4,
-        "title":"VWPolo",
+        "title":"Volkswagen Polo",
         "img": require("../images/polo.png"),
         "model": "Polo GT",
         "make": "Volkswagen",
@@ -58,7 +58,7 @@ export const carsAvailable =[
     {
         "id":5,
         "key": 5,
-        "title":"MiniCoop",
+        "title":"Cooper Mini",
         "img":require("../images/mini.png"),
         "model": "Mini",
         "make": "Cooper",
@@ -72,7 +72,7 @@ export const carsAvailable =[
     {
         "id":6,
         "key": 6,
-        "title":"KiaSoul",
+        "title":"Kia Soul",
         "img": require("../images/kia.png"),
         "model": "Soul",
         "make": "Kia",
@@ -86,7 +86,7 @@ export const carsAvailable =[
     {
         "id":7,
         "key": 7,
-        "title":"ToyotaPriuas",      
+        "title":"Toyota Priuas",      
         "img": require("../images/toyota.png"),
         "model": "Priuas",
         "make": "Toyota",
