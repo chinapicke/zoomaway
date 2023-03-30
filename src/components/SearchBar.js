@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import { carsAvailable } from '../assets/data/cars'
+import Modal from '../components/Modal'
+// import CarContext from './CarContext'
 
 
 const locations = [
@@ -48,6 +50,10 @@ function SearchBar() {
   const [selectDTime, setSelectDTime] = useState("")
   const [userEnquiry, setUserEnquiry] = useState([])
 
+  // modal
+  const [showModal, setShowModal] = useState(false);
+
+
 
   const formSubmit = (e) => {
     e.preventDefault()
@@ -71,6 +77,7 @@ function SearchBar() {
     newList =[...input, ...userEnquiry]
     setUserEnquiry(newList)
     console.log(newList)
+    setShowModal(true)
         // opens modal that confirms the order and for the user to fill in form with their details
   }
 
@@ -110,10 +117,13 @@ function SearchBar() {
             value={selectCar}
             onChange={carSelect}
           >
+                          <option value="">Select a car</option>
+
             {
               carsAvailable.map((select) =>
-                <option
+                              <option 
                 >{select.make} {select.model}</option>
+              
               )
             }
           </select>
@@ -207,7 +217,12 @@ function SearchBar() {
         </div>
       </div>
 
-      <button onClick={formSubmit}>Submit</button>
+      <button className="bg-white" onClick={formSubmit}>
+        Click button
+        <Modal 
+        open={showModal}
+        onClose={() => setShowModal(false)}/>
+      </button>
       </div>
     </form >
   )

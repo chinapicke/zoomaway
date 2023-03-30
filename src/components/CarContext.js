@@ -4,16 +4,16 @@ const CarContext = createContext();
 
 function Provider({ children }) {
   // modal opening
-  const [carInfo, setCarInfo] = useState();
+  const [showModal, setShowModal] = useState(false);
 
   const valueToShare = {
-    carInfo,
-    setCarInfo,
+    setShowModal,
+    showModal,
   };
 
 
   return (
-    <Cars.Provider value={valueToShare}>{children}</Cars.Provider>
+    <CarContext.Provider value={valueToShare}>{children}</CarContext.Provider>
   )
 }
 
