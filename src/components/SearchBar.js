@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { carsAvailable } from '../assets/data/cars'
 import Modal from '../components/Modal'
 // import CarContext from './CarContext'
+import { useForm } from "react-hook-form";
 
 
 const locations = [
@@ -37,7 +38,7 @@ const locations = [
 
 ]
 
-let newList=([])
+let newList = ([])
 
 function SearchBar() {
 
@@ -53,32 +54,47 @@ function SearchBar() {
   // modal
   const [showModal, setShowModal] = useState(false);
 
+  // form validation
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const onSubmit = data => alert(JSON.stringify(data));
 
 
   const formSubmit = (e) => {
     e.preventDefault()
-    setSelectCar("")
-    setSelectPickup("")
-    setSelectPDate("")
-    setSelectDropoff("")
-    setSelectDDate("")
-    setSelectDTime("")
-    setSelectPTime("")
+    // setSelectCar("")
+    // setSelectPickup("")
+    // setSelectPDate("")
+    // setSelectDropoff("")
+    // setSelectDDate("")
+    // setSelectDTime("")
+    // setSelectPTime("")
     const input = [
-      {car: selectCar,
-      pickup: selectPickup,
-      pickupDate: selectPDate,
-      pickupTime: selectPTime,
-      dropoff:selectDropoff,
-      dropDate: selectDDate,
-      dropTime: selectDTime}
+      {
+        car: selectCar,
+        pickup: selectPickup,
+        pickupDate: selectPDate,
+        pickupTime: selectPTime,
+        dropoff: selectDropoff,
+        dropDate: selectDDate,
+        dropTime: selectDTime
+      }
     ]
     // console.log(input)
-    newList =[...input, ...userEnquiry]
+    newList = [...input, ...userEnquiry]
     setUserEnquiry(newList)
     console.log(newList)
+    // opens modal that confirms the order and for the user to fill in form with their details
     setShowModal(true)
-        // opens modal that confirms the order and for the user to fill in form with their details
+
+    // const carErrorMessage= document.getElementById('#carValidation')
+
+    // if (selectCar.trim().length !== 0) {
+    //   console.log('input value is NOT empty');
+    //   return
+    // } else {
+    //   console.log('input value is empty');
+
+    // }
   }
 
   // pass the set into an array 
@@ -107,7 +123,7 @@ function SearchBar() {
 
 
   return (
-    <form className="selectCarForm">
+    <form className="selectCarForm" onSubmit={handleSubmit(onSubmit)}>
       <div>
         <div>
           <label className="block">
@@ -116,18 +132,20 @@ function SearchBar() {
           <select
             value={selectCar}
             onChange={carSelect}
+            {...register("selectCar", { required: 'Car is required' })}
           >
-                          <option value="">Select a car</option>
+            <option value="">Select a car</option>
 
             {
               carsAvailable.map((select) =>
-                              <option 
+                <option
                 >{select.make} {select.model}</option>
-              
+
               )
             }
           </select>
-        </div>
+        {errors.selectCar && <span>{errors.selectCar.message}</span>}
+          </div>
       </div>
 
       <div >
@@ -169,7 +187,7 @@ function SearchBar() {
           <input type="time"
             className='timePickup'
             value={selectPTime}
-            onChange={timePickUp}/>
+            onChange={timePickUp} />
         </div>
       </div>
 
@@ -199,34 +217,36 @@ function SearchBar() {
         </label>
         <div >
           <input type='date'
-          format='yyyy-MM-dd'
+            format='yyyy-MM-dd'
             value={selectDDate}
             onChange={dateDropOff}
           />
-      </div>
-
-      <div>
-        <label className="block">
-          Drop-off Time
-        </label>
-        <div>
-          <input type="time"
-            className='timePickup'
-            value={selectDTime}
-            onChange={timeDropOff}></input>
         </div>
-      </div>
 
-      <button className="bg-white" onClick={formSubmit}>
-        Click button
-        <Modal 
-        open={showModal}
-        onClose={() => setShowModal(false)}/>
-      </button>
+        <div>
+          <label className="block">
+            Drop-off Time
+          </label>
+          <div>
+            <input type="time"
+              className='timePickup'
+              value={selectDTime}
+              onChange={timeDropOff}></input>
+          </div>
+        </div>
+
+        <button className="bg-white">
+        {/* // onClick={formSubmit}> */}
+          Submit
+          {/* <Modal
+            open={showModal}
+            onClose={() => setShowModal(false)}
+          /> */}
+        </button>
       </div>
     </form >
   )
 }
 
-export {newList}
+export { newList }
 export default SearchBar

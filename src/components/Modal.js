@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import { newList } from './SearchBar'
@@ -53,7 +52,7 @@ function Modal({ open, onClose }) {
                             <>
 
                                 <h4> Please fill in the below form and submit to send us your enquiry</h4>
-                                <img src={carUrl(data)} className='w-54 h-48 modalImg' placeholder='Your selected car' />
+                                <img src={carUrl(data)} className='w-54 h-48 modalImg' alt='Your selected car' />
                                 <h1 className='modalInput' id='modalCar'>Car: {data.car}</h1>
                                 <h2 className='modalInput' id='modalPickup'>Pick up desination: {data.pickup}</h2>
                                 <h3 className='modalInput' id='modalPDateTime'>Pick up time and date: {data.pickupDate} {data.pickupTime}</h3>
