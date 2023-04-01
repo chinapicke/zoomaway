@@ -3,7 +3,6 @@ import Navbar from './Pages/Navbar';
 import Homepage from './Pages/Homepage';
 import Vechiles from './Pages/Vechiles';
 import About from './Pages/About';
-// import NewFile from './Pages/NewFile';
 // import MeetTeam from './Pages/MeetTeam';
 // import Testimonals from './Pages/Testimonals';
 // import Contact from './Pages/Contact';
@@ -12,7 +11,6 @@ import About from './Pages/About';
 function App() {
   return (<>
   <Navbar />
-  {/* <NewFile /> */}
   <Homepage />
   <About /> 
   <Vechiles />  
