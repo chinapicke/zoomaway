@@ -37,7 +37,6 @@ const locations = [
   },
 
 ]
-
 let newList = ([])
 
 function SearchBar() {
@@ -55,19 +54,26 @@ function SearchBar() {
   const [showModal, setShowModal] = useState(false);
 
   // form validation
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => alert(JSON.stringify(data));
+  const [showCarError, setShowCarError] = useState(true);
+  const [showPickdestError, setShowPickdestError] = useState(true);
+  const [showDropdestError, setShowDropdestError] = useState(true);
+  const [showPdateError, setShowPdateError] = useState(true);
+  const [showDdateError, setShowDdateError] = useState(true);
+  const [showPtimeError, setShowPTimeError] = useState(true);
+  const [showDtimeError, setShowDTimeError] = useState(true);
+
+
 
 
   const formSubmit = (e) => {
     e.preventDefault()
-    // setSelectCar("")
-    // setSelectPickup("")
-    // setSelectPDate("")
-    // setSelectDropoff("")
-    // setSelectDDate("")
-    // setSelectDTime("")
-    // setSelectPTime("")
+    setSelectCar("")
+    setSelectPickup("")
+    setSelectPDate("")
+    setSelectDropoff("")
+    setSelectDDate("")
+    setSelectDTime("")
+    setSelectPTime("")
     const input = [
       {
         car: selectCar,
@@ -83,22 +89,10 @@ function SearchBar() {
     newList = [...input, ...userEnquiry]
     setUserEnquiry(newList)
     console.log(newList)
-    // opens modal that confirms the order and for the user to fill in form with their details
     setShowModal(true)
-
-    // const carErrorMessage= document.getElementById('#carValidation')
-
-    // if (selectCar.trim().length !== 0) {
-    //   console.log('input value is NOT empty');
-    //   return
-    // } else {
-    //   console.log('input value is empty');
-
-    // }
   }
 
-  // pass the set into an array 
-
+  // getting the users input
   const carSelect = (e) => {
     setSelectCar(e.target.value)
   }
@@ -122,8 +116,24 @@ function SearchBar() {
   }
 
 
+// To show text if there is no input
+  const carError = selectCar === ''
+  const destPError = selectPickup === ''
+  const destDError = selectDropoff === ''
+  const timePError = selectPTime === ''
+  const timeDError = selectDTime === ''
+  const datePError = selectPDate === ''
+  const dateDError = selectDDate === ''
+
+// Submit button disabled if inputs not filled in
+const validation = () => {
+  return carError & destPError & destDError & timePError & timeDError & datePError & dateDError
+}
+
+ 
+
   return (
-    <form className="selectCarForm" onSubmit={handleSubmit(onSubmit)}>
+    <form className="selectCarForm" >
       <div>
         <div>
           <label className="block">
@@ -132,9 +142,8 @@ function SearchBar() {
           <select
             value={selectCar}
             onChange={carSelect}
-            {...register("selectCar", { required: 'Car is required' })}
           >
-            <option value="">Select a car</option>
+            <option value="">--Select a car--</option>
 
             {
               carsAvailable.map((select) =>
@@ -144,8 +153,10 @@ function SearchBar() {
               )
             }
           </select>
-        {errors.selectCar && <span>{errors.selectCar.message}</span>}
-          </div>
+          <span>
+            {/* Condition that if selectCar = 0, then show the p tag with the error  */} 
+            {carError && showCarError ? <p>You did not select a car</p> : null }</span>
+        </div>
       </div>
 
       <div >
@@ -157,12 +168,17 @@ function SearchBar() {
             value={selectPickup}
             onChange={destPickUp}
           >
+            <option value="">--Select a destination--</option>
             {
               locations.map((place, i) =>
                 <option>{place.destination}</option>
               )
             }
           </select>
+          <span>
+            {/* Condition that if selectCar = 0, then show the p tag with the error  */} 
+            {destPError && showPickdestError ? <p>You did not select a pick-up destination</p> : null}</span>
+
         </div>
       </div>
 
@@ -176,6 +192,11 @@ function SearchBar() {
             value={selectPDate}
             onChange={datePickUp}
           />
+          <span>
+            {/* Condition that if selectCar = 0, then show the p tag with the error  
+            - Need to create another condition if date before today*/}
+            {datePError && showPdateError ? <p>You did not select a pick-up date</p> : null}</span>
+
         </div>
       </div>
 
@@ -189,6 +210,9 @@ function SearchBar() {
             value={selectPTime}
             onChange={timePickUp} />
         </div>
+        <span>
+          {/* Condition that if selectCar = 0, then show the p tag with the error  */}
+          {timePError && showPtimeError ? <p>You did not select a pick-up time</p> : null}</span>
       </div>
 
       <div>
@@ -201,12 +225,18 @@ function SearchBar() {
               value={selectDropoff}
               onChange={destDropOff}
             >
+              <option value="">--Select a destination--</option>
+
               {
                 locations.map((place, i) =>
                   <option>{place.destination}</option>
                 )
               }
             </select>
+            <span>
+              {/* Condition that if selectCar = 0, then show the p tag with the error  */}
+              {destDError && showDropdestError ? <p>You did not select a drop-off destination</p> : null}</span>
+
           </div>
         </div>
       </div>
@@ -221,6 +251,10 @@ function SearchBar() {
             value={selectDDate}
             onChange={dateDropOff}
           />
+          <span>
+            {/* Condition that if selectCar = 0, then show the p tag with the error  */}
+            {dateDError && showDdateError ? <p>You did not select a drop-off date</p> : null}</span>
+
         </div>
 
         <div>
@@ -232,17 +266,23 @@ function SearchBar() {
               className='timePickup'
               value={selectDTime}
               onChange={timeDropOff}></input>
+            <span>
+              {/* Condition that if selectCar = 0, then show the p tag with the error  */}
+              {timeDError && showDtimeError ? <p>You did not select a drop-off time</p> : null}</span>
+
           </div>
         </div>
 
-        <button className="bg-white">
-        {/* // onClick={formSubmit}> */}
+        <button className="bg-white"
+          onClick={formSubmit} 
+          disabled={validation()}>
           Submit
-          {/* <Modal
+          <Modal
             open={showModal}
             onClose={() => setShowModal(false)}
-          /> */}
+          />
         </button>
+
       </div>
     </form >
   )
