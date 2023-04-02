@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { carsAvailable } from '../assets/data/cars'
 import Modal from '../components/Modal'
 // import CarContext from './CarContext'
-import { useForm } from "react-hook-form";
 
 
 const locations = [
@@ -127,10 +126,10 @@ function SearchBar() {
 
 // Submit button disabled if inputs not filled in
 const validation = () => {
-  return carError & destPError & destDError & timePError & timeDError & datePError & dateDError
+  return carError 
+  // & destPError & destDError & timePError & timeDError & datePError & dateDError
 }
 
- 
 
   return (
     <form className="selectCarForm" >

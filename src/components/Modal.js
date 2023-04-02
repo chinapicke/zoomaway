@@ -3,7 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import { newList } from './SearchBar'
 import { carsAvailable } from '../assets/data/cars'
+import { useState } from 'react'
 
+let userDetailList = ([])
 function Modal({ open, onClose }) {
 
     const carUrl = () => {
@@ -32,19 +34,67 @@ function Modal({ open, onClose }) {
 
     }
 
+    const [fName, setFName] = useState('')
+    const [lName, setLName] = useState('')
+    const [email, setEmail] = useState('')
+    const [age, setAge] = useState('')
+    const [telephone, setTelephone] = useState('')
+    const [userDetails, setUserDetails] = useState([])
+
+    const sendEmail = (e) => {
+        e.preventDefault()
+        setFName("")
+        setLName("")
+        setEmail("")
+        setAge("")
+        setTelephone("")
+
+        const information = [
+            {
+                firstName: fName,
+                lastName: lName,
+                email: email,
+                age: age,
+                phone: telephone
+            }
+        ]
+        
+        userDetailList = [...information, ...userDetails]
+        setUserDetails(userDetailList)
+        console.log(userDetailList)
+        onClose()
+       
+    }
+
+    const fnameEnter = (e) => {
+        setFName(e.target.value)
+    }
+    const lnameEnter = (e) => {
+        setLName(e.target.value)
+    }
+    const emailEnter = (e) => {
+        setEmail(e.target.value)
+    }
+    const ageEnter = (e) => {
+        setAge(e.target.value)
+    }
+    const telephoneEnter = (e) => {
+        setTelephone(e.target.value)
+    }
+
     if (!open) return null;
     return (
         <div className="justify-center items-center flex h-full fixed inset-0 z-50 outline-none focus:outline-none"
-        onClick={onClose}>
+            onClick={onClose}>
             <div className="relative w-auto my-6 mx-auto max-w-3xl"
-            onClick={(e)=> e.stopPropagation()}>
+                onClick={(e) => e.stopPropagation()}>
                 <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                     <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
                         <h3 className="text-3xl font-semibold">
                             Nearly there..
                         </h3>
                         <button onClick={onClose}>
-                                <FontAwesomeIcon icon={faXmark} />
+                            <FontAwesomeIcon icon={faXmark} />
                         </button>
                     </div>
                     <div className="relative p-6 flex-auto">{
@@ -62,38 +112,57 @@ function Modal({ open, onClose }) {
 
                     }
                     </div>
-                    {/* <form>
-                                    <div className="grid md:grid-cols-2 sm:gap-5">
-                                        <div className="relative z-0 w-full mb-6 group">
-                                            <input type="text" className='bg-gray-300' required />
-                                            <label >First name</label>
-                                        </div>
-                                        <div className="relative z-0 w-full mb-6 group">
-                                            <input type="text" className='bg-gray-300' required />
-                                            <label>Last name</label>
-                                        </div>
-                                    </div>
-                                    <div className="relative z-0 w-full mb-6 group">
-                                        <input type="email" className='bg-gray-300 w-96' required />
-                                        <label >Email address</label>
-                                    </div>
-                                    <div className="grid md:grid-cols-2 md:gap-6">
-                                        <div className="relative z-0 w-full mb-6 group">
-                                            <input type="number" className='bg-gray-300' required />
-                                            <label>Age</label>
-                                        </div>
-                                        <div className="relative z-0 w-full mb-6 group">
-                                            <input type="tel" className='bg-gray-300' required />
-                                            <label>Phone number</label>
-                                        </div>
-                                    </div>
-                                </form> */}
+                    <form>
+                        <div className="grid md:grid-cols-2 sm:gap-5">
+                            <div className=" z-0 w-full mb-6 group">
+                                <input type="text"
+                                    className='bg-gray-300'
+                                    value={fName}
+                                    onChange={fnameEnter}
+                                />
+                                <label >First name</label>
+                            </div>
+                            <div className=" z-0 w-full mb-6 group">
+                                <input type="text"
+                                    className='bg-gray-300'
+                                    value={lName}
+                                    onChange={lnameEnter} />
+                                <label>Last name</label>
+                            </div>
+                        </div>
+                        <div className=" z-0 w-full mb-6 group">
+                            <input type="email"
+                                className='bg-gray-300 w-96'
+                                value={email}
+                                onChange={emailEnter}
+                                />
+                            <label >Email address</label>
+                        </div>
+                        <div className="grid md:grid-cols-2 md:gap-6">
+                            <div className=" z-0 w-full mb-6 group">
+                                <input type="number"
+                                    className='bg-gray-300'
+                                    value={age}
+                                    onChange={ageEnter}
+                                    />
+                                    {/* Need to limit lowest number user can input  */}
+                                <label>Age</label>
+                            </div>
+                            <div className=" z-0 w-full mb-6 group">
+                                <input type="tel"
+                                    className='bg-gray-300'
+                                    value={telephone}
+                                    onChange={telephoneEnter}
+                                    />
+                                <label>Phone number</label>
+                            </div>
+                        </div>
+                    </form>
                     <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                         <button
                             className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                             type="button"
-                            onClick={onClose}
-                        >
+                            onClick={sendEmail}>
                             Submit
                         </button>
                     </div>
