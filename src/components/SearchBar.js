@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { carsAvailable } from '../assets/data/cars'
 import Modal from '../components/Modal'
-// import CarContext from './CarContext'
+import moment from 'moment/moment'
 
 
 const locations = [
@@ -130,6 +130,10 @@ const validation = () => {
   // & destPError & destDError & timePError & timeDError & datePError & dateDError
 }
 
+// date limit min and max
+const minDate = (moment().format("YYYY-MM-DD"))
+
+
 
   return (
     <form className="selectCarForm" >
@@ -190,6 +194,7 @@ const validation = () => {
             format='yyyy-MM-dd'
             value={selectPDate}
             onChange={datePickUp}
+            min={minDate}
           />
           <span>
             {/* Condition that if selectCar = 0, then show the p tag with the error  
@@ -249,6 +254,7 @@ const validation = () => {
             format='yyyy-MM-dd'
             value={selectDDate}
             onChange={dateDropOff}
+            min={minDate}
           />
           <span>
             {/* Condition that if selectCar = 0, then show the p tag with the error  */}
