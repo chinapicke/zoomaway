@@ -119,19 +119,20 @@ function SearchBar() {
   const carError = selectCar === ''
   const destPError = selectPickup === ''
   const destDError = selectDropoff === ''
-  const timePError = selectPTime === ''
-  const timeDError = selectDTime === ''
+  const timePError = selectPTime === '' || selectPTime <="07:00" || selectPTime >= "21:00"
+  const timeDError = selectDTime === '' || selectDTime <="07:00" || selectDTime >= "21:00"
   const datePError = selectPDate === ''
   const dateDError = selectDDate === ''
 
 // Submit button disabled if inputs not filled in
 const validation = () => {
-  return carError 
-  // & destPError & destDError & timePError & timeDError & datePError & dateDError
+  return timePError 
+  // carError & destPError & destDError & timePError & timeDError & datePError & dateDError
 }
 
 // date limit min and max
 const minDate = (moment().format("YYYY-MM-DD"))
+
 
 
 
@@ -194,7 +195,7 @@ const minDate = (moment().format("YYYY-MM-DD"))
             format='yyyy-MM-dd'
             value={selectPDate}
             onChange={datePickUp}
-            min={minDate}
+
           />
           <span>
             {/* Condition that if selectCar = 0, then show the p tag with the error  
@@ -212,11 +213,12 @@ const minDate = (moment().format("YYYY-MM-DD"))
           <input type="time"
             className='timePickup'
             value={selectPTime}
-            onChange={timePickUp} />
+            onChange={timePickUp} 
+            />
         </div>
         <span>
           {/* Condition that if selectCar = 0, then show the p tag with the error  */}
-          {timePError && showPtimeError ? <p>You did not select a pick-up time</p> : null}</span>
+          {timePError && showPtimeError ? <p>You did not select a pick-up time between 07:00 and 21:00</p> : null}</span>
       </div>
 
       <div>
