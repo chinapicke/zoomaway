@@ -82,6 +82,18 @@ function Modal({ open, onClose }) {
         setTelephone(e.target.value)
     }
 
+    // to show text if the input is blank 
+    const fNameError = fName ===""
+    const lNameError = lName ===""
+    const emailError = email ===""
+    const ageError = age ===""
+    const phoneError = telephone ===""
+
+    const validation = () => {
+        return fNameError & lNameError & emailError & ageError & phoneError
+      }
+      
+
     if (!open) return null;
     return (
         <div className="justify-center items-center flex h-full fixed inset-0 z-50 outline-none focus:outline-none"
@@ -162,7 +174,8 @@ function Modal({ open, onClose }) {
                         <button
                             className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                             type="button"
-                            onClick={sendEmail}>
+                            onClick={sendEmail}
+                            disabled={validation()}>
                             Submit
                         </button>
                     </div>
