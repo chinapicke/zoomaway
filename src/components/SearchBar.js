@@ -278,10 +278,11 @@ const validation = () => {
           Submit
           <Modal
             open={showModal}
-            onClose={() => setShowModal(false)}
+            onClose={() => {setShowModal(false);
+              // this refreshes the page so modal doesn't shw 2 arrays of the users input 
+               window.location.reload(true)}}
           />
         </button>
-
       </div>
     </form >
   )

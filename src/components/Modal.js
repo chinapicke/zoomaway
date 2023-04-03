@@ -90,7 +90,8 @@ function Modal({ open, onClose }) {
     const phoneError = telephone ===""
 
     const validation = () => {
-        return fNameError & lNameError & emailError & ageError & phoneError
+        return fNameError 
+        // & lNameError & emailError & ageError & phoneError
       }
       
 
@@ -156,6 +157,8 @@ function Modal({ open, onClose }) {
                                     className='bg-gray-300'
                                     value={age}
                                     onChange={ageEnter}
+                                    min="18"
+                                    max='120'
                                     />
                                     {/* Need to limit lowest number user can input  */}
                                 <label>Age</label>
