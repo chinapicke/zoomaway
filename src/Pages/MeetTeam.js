@@ -1,4 +1,5 @@
 import React from 'react'
+import HeroBanner from '../components/HeroBanner'
 import '../assets/styles/Meetteam.css'
 
 const teamMembers = [
@@ -32,6 +33,8 @@ const teamMembers = [
 
 function MeetTeam() {
     return (
+        <>
+        <HeroBanner />
         <div className='teamProfiles'>
             <section class="bg-white">
                 <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
@@ -54,6 +57,7 @@ function MeetTeam() {
                 </div>
             </section>
         </div>
+        </>
     )
 }
 

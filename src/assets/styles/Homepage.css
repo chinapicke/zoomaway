@@ -3,6 +3,23 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center ;
+    height: 400px;
+    opacity: 0.7;
+}
+
+ .selectCarForm{
+    position: relative;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    top:170px;
+    background-color:#FF8210;
+} 
+
+.validationText{
+    font-size: 15px;
+    word-break: break-all;
 }
 
 

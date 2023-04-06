@@ -1,16 +1,20 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope  } from '@fortawesome/free-solid-svg-icons'
+import HeroBanner from '../components/HeroBanner'
+
 
 function Contact() {
     return (
+        <>
+        <HeroBanner />
         <div className='wholeContactPage grid grid-cols-2 md:grid-cols-2 gap-4'>
             <div className='contactInfoAside'>
                 <h1>Want to ask a question or more information?</h1>
                 <h2>We promise to try answer your question/enquiry within 48 hours. Please check your email inbox/spam.</h2>
                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
                     <li class="mb-4">
-                        <a href="#" class="hover:underline"><span><FontAwesomeIcon icon={faPhone} /></span>0208 123 4567 </a>
+                        <a href="#" class="hover:underline"><span><FontAwesomeIcon icon={faPhone} /></span>0208 123 4567</a>
                     </li>
                     <li class="mb-4">
                         <a href="#" class="hover:underline"><span><FontAwesomeIcon icon={faEnvelope} /></span>zoomaway@gmail.com</a>
@@ -39,6 +43,7 @@ function Contact() {
                 </section>
             </div>
         </div>
+        </>
     )
 }
 

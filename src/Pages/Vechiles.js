@@ -1,9 +1,8 @@
 import React from 'react'
 import { carsAvailable } from '../assets/data/cars'
 import {Routes, Route, useNavigate} from 'react-router-dom';
+import HeroBanner from '../components/HeroBanner';
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faGasPump } from '@fortawesome/free-solid-svg-icons'
 
 
 function Vechiles() {
@@ -14,6 +13,8 @@ function Vechiles() {
     }
 
     return (
+        <>
+        <HeroBanner />
         <div className='carCards grid grid-cols-2 md:grid-cols-3 gap-4'>
             {carsAvailable.map((card) =>
                 <div class=" indiviCarmax-w-sm m-5 border border-gray-200 rounded-lg shadow ">
@@ -49,6 +50,7 @@ function Vechiles() {
             )}
 
         </div>
+        </>
     )
 }
 

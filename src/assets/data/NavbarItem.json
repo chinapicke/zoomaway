@@ -15,8 +15,8 @@
     },
     {
         "id": "vechileOption",
-        "title": "Vehicles",
-        "url": "./Pages/Vehicles",
+        "title": "Vechiles",
+        "url": "./Pages/Vechiles",
         "cName": "navbar_items",
         "linkTo":"/vechiles"
     },

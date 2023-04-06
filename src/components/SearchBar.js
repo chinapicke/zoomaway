@@ -89,6 +89,8 @@ function SearchBar() {
     setUserEnquiry(newList)
     console.log(newList)
     setShowModal(true)
+    // disables button to be clicked twice
+    e.currentTarget.disabled = true;
   }
 
   // getting the users input
@@ -127,15 +129,14 @@ function SearchBar() {
 
   // Submit button disabled if inputs not filled in
   const validation = () => {
-    return carError, destPError, destDError, timePError, timeDError, datePError, dateDError
-
+    return carError & destPError & destPError & destDError & timePError & timeDError & datePError & dateDError
   }
 
   // date limit min and max
   const minDate = (moment().format("YYYY-MM-DD"))
 
   return (
-    <form className="selectCarForm" >
+    <form className="selectCarForm grid grid-cols-4 gird-rows-2" >
       <div>
         <div>
           <label className="block">
@@ -157,7 +158,7 @@ function SearchBar() {
           </select>
           <span>
             {/* Condition that if selectCar = 0, then show the p tag with the error  */}
-            {carError && showCarError ? <p>You did not select a car</p> : null}</span>
+            {carError && showCarError ? <p className='validationText'>You did not select a car</p> : null}</span>
         </div>
       </div>
 
@@ -179,7 +180,7 @@ function SearchBar() {
           </select>
           <span>
             {/* Condition that if selectCar = 0, then show the p tag with the error  */}
-            {destPError && showPickdestError ? <p>You did not select a pick-up destination</p> : null}</span>
+            {destPError && showPickdestError ? <p className='validationText'>You did not select a pick-up destination</p> : null}</span>
 
         </div>
       </div>
@@ -198,7 +199,7 @@ function SearchBar() {
           <span>
             {/* Condition that if selectCar = 0, then show the p tag with the error  
             - Need to create another condition if date before today*/}
-            {datePError && showPdateError ? <p>You did not select a pick-up date</p> : null}</span>
+            {datePError && showPdateError ? <p className='validationText'>You did not select a pick-up date</p> : null}</span>
 
         </div>
       </div>
@@ -216,7 +217,7 @@ function SearchBar() {
         </div>
         <span>
           {/* Condition that if selectCar = 0, then show the p tag with the error  */}
-          {timePError && showPtimeError ? <p>You did not select a pick-up time between 07:00 and 21:00 </p> : null}</span>
+          {timePError && showPtimeError ? <p className='validationText'>You did not select a pick-up time<br></br> between 07:00 and 21:00 </p> : null}</span>
       </div>
 
       <div>
@@ -239,13 +240,13 @@ function SearchBar() {
             </select>
             <span>
               {/* Condition that if selectCar = 0, then show the p tag with the error  */}
-              {destDError && showDropdestError ? <p>You did not select a drop-off destination</p> : null}</span>
+              {destDError && showDropdestError ? <p className='validationText'>You did not select a drop-off destination</p> : null}</span>
 
           </div>
         </div>
       </div>
 
-      <div>
+      <div className=''>
         <label className="block">
           Drop-off Date
         </label>
@@ -258,9 +259,10 @@ function SearchBar() {
           />
           <span>
             {/* Condition that if selectCar = 0, then show the p tag with the error  */}
-            {dateDError && showDdateError ? <p>You did not select a drop-off date</p> : null}</span>
+            {dateDError && showDdateError ? <p className='validationText'>You did not select a drop-off date</p> : null}</span>
 
         </div>
+      </div>
 
         <div>
           <label className="block">
@@ -273,12 +275,12 @@ function SearchBar() {
               onChange={timeDropOff}></input>
             <span>
               {/* Condition that if selectCar = 0, then show the p tag with the error  */}
-              {timeDError && showDtimeError ? <p>You did not select a drop-off time between 07:00 and 21:00</p> : null}</span>
+              {timeDError && showDtimeError ? <p className='validationText'>You did not select a drop-off time<br></br>between 07:00 and 21:00</p> : null}</span>
 
           </div>
         </div>
 
-        <button className="bg-white"
+        <button className="bg-white w-24 h-12"
           onClick={formSubmit}
           disabled={validation()}>
           Submit
@@ -291,7 +293,6 @@ function SearchBar() {
             }}
           />
         </button>
-      </div>
     </form >
   )
 }

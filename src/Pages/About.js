@@ -1,5 +1,6 @@
 import React from 'react'
 import AboutIcons from '../components/AboutIcons'
+import HeroBanner from '../components/HeroBanner'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCar, faWarehouse,faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons'
 
@@ -8,6 +9,8 @@ import { faCar, faWarehouse,faScrewdriverWrench } from '@fortawesome/free-solid-
 
 function About() {
   return (
+    <>
+    <HeroBanner />
     <div className='aboutPg grid grid-cols-2'>
       <div className='aboutImg'>
         <img src='https://images.unsplash.com/photo-1529369623266-f5264b696110?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2FyJTIwcmVudGFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'></img>
@@ -21,6 +24,7 @@ function About() {
         <AboutIcons />
       </div>
     </div>
+    </>
   )
 }
 
