@@ -127,7 +127,8 @@ function SearchBar() {
 
   // Submit button disabled if inputs not filled in
   const validation = () => {
-    return carError & destPError & destDError & timePError & timeDError & datePError & dateDError
+    return carError, destPError, destDError, timePError, timeDError, datePError, dateDError
+
   }
 
   // date limit min and max
@@ -171,7 +172,7 @@ function SearchBar() {
           >
             <option value="">--Select a destination--</option>
             {
-              locations.map((place, i) =>
+              locations.map((place) =>
                 <option>{place.destination}</option>
               )
             }

@@ -90,7 +90,7 @@ function Modal({ open, onClose }) {
     const phoneError = telephone ===""
 
     const validation = () => {
-        return fNameError & lNameError & emailError & ageError & phoneError
+        return fNameError, lNameError, emailError, ageError, phoneError
       }
       
 
