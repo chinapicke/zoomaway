@@ -115,26 +115,23 @@ function SearchBar() {
   }
 
 
-// To show text if there is no input
+  // To show text if there is no input
   const carError = selectCar === ''
   const destPError = selectPickup === ''
   const destDError = selectDropoff === ''
-  const timePError = selectPTime === '' || selectPTime <="07:00" || selectPTime >= "21:00"
-  const timeDError = selectDTime === '' || selectDTime <="07:00" || selectDTime >= "21:00"
+  const timePError = selectPTime === '' || selectPTime <= "07:00" || selectPTime >= "21:00"
+  const timeDError = selectDTime === '' || selectDTime <= "07:00" || selectDTime >= "21:00"
   const datePError = selectPDate === ''
   const dateDError = selectDDate === ''
 
-// Submit button disabled if inputs not filled in
-const validation = () => {
-  return timePError 
-  // carError & destPError & destDError & timePError & timeDError & datePError & dateDError
-}
 
-// date limit min and max
-const minDate = (moment().format("YYYY-MM-DD"))
+  // Submit button disabled if inputs not filled in
+  const validation = () => {
+    return carError & destPError & destDError & timePError & timeDError & datePError & dateDError
+  }
 
-
-
+  // date limit min and max
+  const minDate = (moment().format("YYYY-MM-DD"))
 
   return (
     <form className="selectCarForm" >
@@ -158,8 +155,8 @@ const minDate = (moment().format("YYYY-MM-DD"))
             }
           </select>
           <span>
-            {/* Condition that if selectCar = 0, then show the p tag with the error  */} 
-            {carError && showCarError ? <p>You did not select a car</p> : null }</span>
+            {/* Condition that if selectCar = 0, then show the p tag with the error  */}
+            {carError && showCarError ? <p>You did not select a car</p> : null}</span>
         </div>
       </div>
 
@@ -180,7 +177,7 @@ const minDate = (moment().format("YYYY-MM-DD"))
             }
           </select>
           <span>
-            {/* Condition that if selectCar = 0, then show the p tag with the error  */} 
+            {/* Condition that if selectCar = 0, then show the p tag with the error  */}
             {destPError && showPickdestError ? <p>You did not select a pick-up destination</p> : null}</span>
 
         </div>
@@ -213,12 +210,12 @@ const minDate = (moment().format("YYYY-MM-DD"))
           <input type="time"
             className='timePickup'
             value={selectPTime}
-            onChange={timePickUp} 
-            />
+            onChange={timePickUp}
+          />
         </div>
         <span>
           {/* Condition that if selectCar = 0, then show the p tag with the error  */}
-          {timePError && showPtimeError ? <p>You did not select a pick-up time between 07:00 and 21:00</p> : null}</span>
+          {timePError && showPtimeError ? <p>You did not select a pick-up time between 07:00 and 21:00 </p> : null}</span>
       </div>
 
       <div>
@@ -275,20 +272,22 @@ const minDate = (moment().format("YYYY-MM-DD"))
               onChange={timeDropOff}></input>
             <span>
               {/* Condition that if selectCar = 0, then show the p tag with the error  */}
-              {timeDError && showDtimeError ? <p>You did not select a drop-off time</p> : null}</span>
+              {timeDError && showDtimeError ? <p>You did not select a drop-off time between 07:00 and 21:00</p> : null}</span>
 
           </div>
         </div>
 
         <button className="bg-white"
-          onClick={formSubmit} 
+          onClick={formSubmit}
           disabled={validation()}>
           Submit
           <Modal
             open={showModal}
-            onClose={() => {setShowModal(false);
+            onClose={() => {
+              setShowModal(false);
               // this refreshes the page so modal doesn't shw 2 arrays of the users input 
-               window.location.reload(true)}}
+              window.location.reload(true)
+            }}
           />
         </button>
       </div>

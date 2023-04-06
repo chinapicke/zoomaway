@@ -1,14 +1,32 @@
 import React from 'react'
 import SearchBar from '../components/SearchBar'
 import '../assets/styles/Homepage.css'
+import '../assets/styles/Vechiles.css'
+import AboutIcons from '../components/AboutIcons'
+import VechileCarousel from '../components/VechileCarousel'
+import FAQ from '../components/FAQ'
+import Testimonals from './Testimonals'
 
 function Homepage() {
+
   return (
-    <>
-    <div className='heroBackground'>
-      <SearchBar />
+    <div className='homepage'>
+      <div className='heroBackground'>
+        <SearchBar />
+      </div>
+      <div className='aboutHomepage'>
+        <AboutIcons />
+      </div>
+      <div className='vechileCarousel'>
+        <VechileCarousel />
+      </div>
+      <div className='reviewHomepage'>
+        <Testimonals/>
+      </div>
+      <div className='FAQsection'>
+        <FAQ />
+      </div>
     </div>
-    </>
   )
 }
 

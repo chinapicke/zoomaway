@@ -1,6 +1,7 @@
 import React from 'react'
 import PageLogo from '../assets/images/ZMLG.png'
 import NavItems from '../assets/data/NavbarItem.json'
+import { Link } from 'react-router-dom';
 import '../assets/styles/Navbar.css'
 
 function Navbar() {
@@ -23,7 +24,7 @@ function Navbar() {
                   <a
                     href={headerItems.url}
                     id={headerItems.id}
-                  >{headerItems.title}
+                  > <Link to={headerItems.linkTo}>{headerItems.title}</Link>
                   </a></li>
 
               )}

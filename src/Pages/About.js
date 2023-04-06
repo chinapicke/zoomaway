@@ -1,31 +1,24 @@
-import React from 'react' 
+import React from 'react'
+import AboutIcons from '../components/AboutIcons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLaptop } from '@fortawesome/free-solid-svg-icons'
-import CustomerService from '../assets/images/customerservice.png'
-import getKeys from '../assets/images/getkeys.png'
+import { faCar, faWarehouse,faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons'
+
 
 
 
 function About() {
   return (
-    <div className='procsess'>
-      <div className='onlineSelect'>
-      <FontAwesomeIcon icon={faLaptop} className='w-12 h-12'style={{color: "#000000",}} />
-            <h1>Step 1</h1>
-            <p>Select a car to rent with specific locations and times to pick-up and drop off.</p>
-            <p>Recieve an email with 1 hour to confirm your enquiry.</p>
+    <div className='aboutPg grid grid-cols-2'>
+      <div className='aboutImg'>
+        <img src='https://images.unsplash.com/photo-1529369623266-f5264b696110?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2FyJTIwcmVudGFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'></img>
       </div>
-      <div className='callRepresentative'>
-        <img className='w-12 h-12'src={CustomerService} alt="Customer Service Icon" />
-        <h1>Step 2</h1>
-        <p>24/7 access call from our one of our representatives to confirm your enquiry with payment processing.</p>
-
-
-      </div>
-      <div className='driveAway'>
-        <img className='w-14 h-14' src={getKeys} alt='Get keys' />
-      <h1>Step 3</h1>
-        <p>Pick up your car and zoom away!</p>
+      <div className='aboutText'>
+        <h1>How it all started</h1>
+        <p>We started from only having 5 cars to over 30 in a matter of years.After more than 5 years in business, we decided to give a fresher look to our brand and our services. With our fully renewed fleet of vehicles, we are ready to meet all expectations and requirements.</p>
+        <p><span><FontAwesomeIcon icon={faCar} /></span>30 vechiles</p>
+        <p><span><FontAwesomeIcon icon={faWarehouse} /></span>50 warehouses</p>
+        <p><span><FontAwesomeIcon icon={faScrewdriverWrench} /></span>50+ mechanics</p>
+        <AboutIcons />
       </div>
     </div>
   )

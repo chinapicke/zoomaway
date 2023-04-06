@@ -19,6 +19,8 @@
     "react-datepicker": "^4.11.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
+    "react-multi-carousel": "^2.8.3",
+    "react-router": "^6.10.0",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
     "react-tailwindcss-datepicker": "^1.5.1",
