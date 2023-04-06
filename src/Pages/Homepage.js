@@ -5,7 +5,7 @@ import '../assets/styles/Vechiles.css'
 import AboutIcons from '../components/AboutIcons'
 import VechileCarousel from '../components/VechileCarousel'
 import FAQ from '../components/FAQ'
-import Testimonals from './Testimonals'
+import TestimonalCard from '../components/TestimonalCard'
 
 function Homepage() {
 
@@ -21,7 +21,7 @@ function Homepage() {
         <VechileCarousel />
       </div>
       <div className='reviewHomepage'>
-        <Testimonals/>
+        <TestimonalCard/>
       </div>
       <div className='FAQsection'>
         <FAQ />
