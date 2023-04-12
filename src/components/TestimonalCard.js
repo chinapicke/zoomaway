@@ -31,11 +31,11 @@ function TestimonalCard() {
   return (
     <>
       <div className="testimonialsTitle">
-        <h1 className='text-5xl font-bold my-8 text-center'>Testimonals</h1>
-        <h2>Hear from some of our happy customers...</h2>
-        <div className='slider grid grid-cols-2 md:grid-cols-3 gap-4 w-full p-5'>
+        <h1 className='testimonialHeading text-5xl font-bold my-8 text-center m'>Testimonals</h1>
+        <h2 className='testimonialSubheading'>Hear from some of our happy customers...</h2>
+        <div className='allReviews grid grid-cols-2 md:grid-cols-3 gap-4 w-full p-5'>
           {customerReviews.map((review) =>
-            <blockquote className="bg-gray-100 p-8 h-100  ">
+            <blockquote className=" individualReview bg-gray-100 p-8 h-100  ">
               <div className="flex items-center gap-4 viewedReview">
                 <img
                   alt={review.name}
@@ -43,16 +43,16 @@ function TestimonalCard() {
                   className="h-16 w-16 rounded-full object-cover"
                 />
 
-                <div className="text-sm">
+                <div className="text-xl underline italics">
                   <p className="font-medium">{review.name}</p>
                 </div>
               </div>
 
-              <p className="relative mt-4 text-gray-500">
-                <span className="text-xl">&ldquo;</span>
+              <p className="relative mt-4 text-gray-500 text-xl italic">
+                <span>&ldquo;</span>
                 {review.review}
 
-                <span className="text-xl">&rdquo;</span>
+                <span >&rdquo;</span>
               </p>
             </blockquote>
           )}
