@@ -13,25 +13,23 @@ function AboutIcons() {
         <div className='iconWrapper' id='laptopWrapper'>
           <FontAwesomeIcon icon={faLaptop} className='aboutIcon w-12 h-10' style={{ color: "#000000", }} id='laptopIcon' />
         </div>
-        <h1>Step 1</h1>
-        <p>Select a car to rent with specific locations and times to pick-up and drop off.</p>
-        <p>Recieve an email with 1 hour to confirm your enquiry.</p>
+        <h1 className='homepageSteps underline underline-offset-2'>Step 1</h1>
+        <p className='stepsText'>Select a car to rent with specific locations and times to pick-up and drop off.</p>
+        <p className='stepsText'>Recieve an email with 1 hour to confirm your enquiry.</p>
       </div>
       <div className='callRepresentative ml-4'>
         <div className='iconWrapper' id='representativeWrapper'>
-          <img className='aboutIcon w-24 h-24' src={CustomerService} alt="Customer Service Icon" id='representativeIcon' />
+          <img className='aboutIcon w-24 h-24 ' src={CustomerService} alt="Customer Service Icon" id='representativeIcon' />
         </div>
-        <h1>Step 2</h1>
-        <p>24/7 access call from our one of our representatives to confirm your enquiry<br></br> with payment processing.</p>
-
-
+        <h1 className='homepageSteps underline underline-offset-2'>Step 2</h1>
+        <p className='stepsText'>24/7 access call from our one of our representatives to confirm your enquiry<br></br> with payment processing.</p>
       </div>
       <div className='driveAway'>
         <div className='iconWrapper' id='keysWrapper'>
           <img className='aboutIcon w-24 h-24' src={getKeys} alt='Get keys' id='keygivingIcon' />
         </div>
-        <h1>Step 3</h1>
-        <p>Pick up your car and zoom away!</p>
+        <h1 className='homepageSteps underline underline-offset-2'>Step 3</h1>
+        <p className='stepsText'>Pick up your car and zoom away!</p>
       </div>
     </div>
   )

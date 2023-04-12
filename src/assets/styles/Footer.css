@@ -29,3 +29,14 @@
     max-height: 9999px;
     transition: all 0.3s;
 }
+
+.callUs{
+    background-color: black;
+    height:25vh;
+    margin-bottom: 20px;
+}
+
+.numberAndIcon{
+    color:#FF8210;
+}
+

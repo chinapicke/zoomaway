@@ -1,11 +1,15 @@
 import React from 'react'
-import FAQ from '../components/FAQ'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhoneFlip  } from '@fortawesome/free-solid-svg-icons'
 import '../assets/styles/Footer.css'
 
 function Footer() {
   return (
     <>
-    <footer class="bg-black">
+    <div className="callUs">
+        <h1 className='text-white text-5xl text-center pt-10'>Call us on <span className='numberAndIcon'>0208 123 4567<FontAwesomeIcon icon={faPhoneFlip} /></span></h1>
+    </div>
+    <footer class="bg-gray-500">
     <div class="mx-auto w-full max-w-screen-xl">
       <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
         <div>

@@ -43,7 +43,7 @@ function About() {
               <div className='iconWrapperAbout' id='laptopWrapperAbout'>
                 <FontAwesomeIcon icon={faLaptop} className='aboutIconAbout w-12 h-10 mb-3' style={{ color: "#000000", }} id='laptopIcon' />
               </div>
-              <h3 className='underline-offset-2'>Step 1</h3>
+              <h3 className='steps underline-offset-2'>Step 1</h3>
               <p>Select a car to rent with specific locations and times to pick-up and drop off.</p>
               <p>Recieve an email with 1 hour to confirm your enquiry.</p>
             </div>
@@ -51,7 +51,7 @@ function About() {
               <div className='iconWrapperAbout' id='representativeWrapperAbout'>
                 <img className='aboutIconAbout w-24 h-24' src={CustomerService} alt="Customer Service Icon" id='representativeIcon' />
               </div>
-              <h3 className='underline-offset-2' >Step 2</h3>
+              <h3 className='steps underline-offset-2' >Step 2</h3>
               <p className='ml-2'>24/7 access call from our one of our representatives to confirm your enquiry<br></br> with payment processing.</p>
 
 
@@ -60,7 +60,7 @@ function About() {
               <div className='iconWrapperAbout' id='keysWrapperAbout'>
                 <img className='aboutIconAbout w-24 h-24' src={getKeys} alt='Get keys' id='keygivingIcon' />
               </div>
-              <h3 className='underline-offset-2'>Step 3</h3>
+              <h3 className=' steps underline-offset-2'>Step 3</h3>
               <p>Pick up your car and zoom away!</p>
             </div>
           </div>
