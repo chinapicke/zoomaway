@@ -36,9 +36,10 @@
 	animation-timing-function: linear;
 }
 
-.iconWrapper{
+.iconWrapperAbout{
     position: relative;
-    right: 115px;
+    left: 55px;
+    margin-bottom: 20px;
 }
 
 .statSection{
@@ -61,4 +62,10 @@ h3{
     font-size: 20px;
     text-decoration: underline;
     font-weight: 600;
+}
+
+.iconWrapperAbout{
+    background-color: #FF8210;
+    border-radius: 30% 70% 58% 42% / 30% 30% 70% 70% ;
+    width: 90px;
 }

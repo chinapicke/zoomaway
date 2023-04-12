@@ -17,7 +17,7 @@ function AboutIcons() {
         <p>Select a car to rent with specific locations and times to pick-up and drop off.</p>
         <p>Recieve an email with 1 hour to confirm your enquiry.</p>
       </div>
-      <div className='callRepresentative'>
+      <div className='callRepresentative ml-4'>
         <div className='iconWrapper' id='representativeWrapper'>
           <img className='aboutIcon w-24 h-24' src={CustomerService} alt="Customer Service Icon" id='representativeIcon' />
         </div>
