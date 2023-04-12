@@ -106,7 +106,7 @@ caption{
 
 .carousel{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 70% 30%;
 }
 
 .vechileCarousel{
@@ -114,7 +114,6 @@ caption{
 }
 
 .carSpecs{
-    margin-right: 40px;
     width: 20vw;
 }
 
@@ -132,11 +131,23 @@ caption{
     color: #FF8210;
 }
 .homepageSteps {
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: underline;
     font-weight: 650;
 }
 
 .stepsText{
     font-size: 16px;
+}
+
+.carNameCarousel{
+   margin-right: 250px;
+}
+
+.specPrice{
+    font-size: 25px;
+}
+
+.FAQTitle{
+    text-shadow: 4px 4px rgba(189, 195, 199, 0.3)
 }

@@ -24,15 +24,15 @@ function VechileCarousel() {
 
     return (
         <>
+            <h1 className='carNameCarousel text-2xl font-semibold text-center e'>{show.model} {show.make}</h1>
             <div className="carousel">
                 <div className='carImg'>
                     <img src={carImage.img} height="300" width="500" alt='Main' />
                 </div>
                 <div className='specsTable'>
                     {/* This shows the correct car spec when a certain car picture is picked with the id  */}
-                    <h1 className='carNameCarousel  text-3xl font-semibold pb-2 '>{show.model} {show.make}</h1>
                     <table className="carSpecs">
-                        <caption className="p-5 text-lg font-semibold text-center text-white">
+                        <caption className=" specPrice p-5 text-lg font-semibold text-center text-white">
                             Price per day: £{show.pricePd}
                         </caption>
                         <tbody className='text-center'>
@@ -45,7 +45,7 @@ function VechileCarousel() {
                                 </td>
                             </tr>
                             <tr className="bg-white">
-                                <th scope="row"className='py-2'>
+                                <th scope="row" className='py-2'>
                                     Model
                                 </th>
                                 <td className='py-2'>

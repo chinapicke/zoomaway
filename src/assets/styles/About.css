@@ -69,3 +69,7 @@
     border-radius: 30% 70% 58% 42% / 30% 30% 70% 70% ;
     width: 90px;
 }
+
+.aboutPgTitle{
+    text-shadow: 4px 4px rgba(189, 195, 199, 0.3)
+}

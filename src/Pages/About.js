@@ -21,7 +21,7 @@ function About() {
           <img src='https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80' alt='Man using car steering wheel' className='aboutImgs mt-8 fadeInClass'></img>
         </div>
         <div className='aboutText'>
-          <h1 className='text-5xl font-bold my-8 text-center  pt-6'>How it all started</h1>
+          <h1 className=' aboutPgTitle text-5xl font-bold my-8 text-center  pt-6'>How it all started</h1>
           <p className='pb-3 text-lg text-center mr-3'>We started from only having 5 cars to over 30 in a matter of years. After more than 5 years in business, we decided to give a fresher look to our brand and our services. With our fully renewed fleet of vehicles, we are ready to meet all expectations and requirements.</p>
           <div className='statSection flex justify-between ml-8 pb-5 mt-4 '>
             <div className='ml-8'>

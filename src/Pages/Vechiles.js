@@ -9,12 +9,10 @@ import HeroBanner from '../components/HeroBanner';
 function Vechiles() {
     const navigate = useNavigate
 
-    
-
     return (
         <>
         <HeroBanner />
-        <h1 className='text-5xl font-bold my-8 text-center pt-6'>Our Vechiles</h1>
+        <h1 className=' vechilePgTitle text-5xl font-bold my-8 text-center pt-6'>Our Vechiles</h1>
         <div className='carCards grid grid-cols-2 md:grid-cols-3 gap-4'>
             {carsAvailable.map((card) =>
                 <div class=" indiviCar max-w-sm m-5 border border-gray-200 rounded-lg shadow flex flex-col justify-between">

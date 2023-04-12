@@ -2,13 +2,13 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope  } from '@fortawesome/free-solid-svg-icons'
 import HeroBanner from '../components/HeroBanner'
-
+import '../assets/styles/Contact.css'
 
 function Contact() {
     return (
         <>
         <HeroBanner />
-        <h1 className='text-5xl font-bold my-8 text-center'> Contact Us</h1>
+        <h1 className='contactPgTitle text-5xl font-bold my-8 text-center'> Contact Us</h1>
         <div className='wholeContactPage grid grid-cols-2 md:grid-cols-2 gap-4'>
             <div className='contactInfoAside'>
                 <h1>Want to ask a question or more information?</h1>

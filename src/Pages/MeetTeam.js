@@ -39,7 +39,7 @@ function MeetTeam() {
             <section className="bg-white">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
                     <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-                        <h2 className="mb-4 text-5xl font-bold ">Our Team</h2>
+                        <h2 className="meetPgTitle mb-4 text-5xl font-bold ">Our Team</h2>
                     </div>
                     <div class="grid gap-8 mb-6 md:mb-4 md:grid-cols-2">
                         {teamMembers.map((profile) =>
