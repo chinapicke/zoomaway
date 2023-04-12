@@ -1,6 +1,15 @@
 .profileImg{
     /* float: left; */
-    width:  100px;
-    height: 100px;
-    object-fit: cover;
+    width:  200px;
+    height: 200px;
+    object-fit:cover;
+
+}
+
+.profileImg:hover {
+    transform: scale(1.5);
+}
+
+.personName{
+    font-size: 25px;
 }

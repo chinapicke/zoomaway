@@ -13,7 +13,7 @@ const teamMembers = [
         id: 2,
         name: 'Luke Shaw',
         position: 'Head of Marketing',
-        img: 'https://thumbs.dreamstime.com/b/suave-bearded-male-portrait-suave-bearded-male-portrait-100259877.jpg',
+        img: 'https://images.unsplash.com/photo-1596075780750-81249df16d19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
     },
     {
         id: 3,
@@ -25,7 +25,7 @@ const teamMembers = [
         id: 4,
         name: 'John Short',
         position: 'Head of Careers',
-        img: 'https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?w=2000',
+        img: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
     },
 
 ]
@@ -36,20 +36,20 @@ function MeetTeam() {
         <>
         <HeroBanner />
         <div className='teamProfiles'>
-            <section class="bg-white">
-                <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
-                    <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-                        <h2 class="mb-4 text-4xl font-bold">Our Team</h2>
+            <section className="bg-white">
+                <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
+                    <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+                        <h2 className="mb-4 text-5xl font-bold ">Our Team</h2>
                     </div>
                     <div class="grid gap-8 mb-6 md:mb-4 md:grid-cols-2">
                         {teamMembers.map((profile) =>
-                            <div class="items-center bg-gray-50 rounded-lg shadow sm:flex  dark:border-gray-700">
-                                <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg profileImg" src={profile.img} alt={profile.name} />
-                                <div class="p-5">
-                                    <h3 class="text-xl font-bold">
+                            <div className="items-center bg-gray-50 rounded-lg shadow sm:flex  dark:border-gray-700">
+                                <img className="w-full rounded-lg md:rounded-none md:rounded-l-lg profileImg" src={profile.img} alt={profile.name} />
+                                <div className="p-5">
+                                    <h3 className="personName font-semibold">
                                         {profile.name}
                                     </h3>
-                                    <span class>{profile.position}</span>
+                                    <span className='font-normal'>{profile.position}</span>
                                 </div>
                             </div>
                         )}
