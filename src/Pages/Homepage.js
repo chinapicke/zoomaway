@@ -20,6 +20,10 @@ function Homepage() {
       <div className='vechileCarousel'>
         <VechileCarousel />
       </div>
+      <div className='textBanner'>
+        <h1 className='font-bold text-4xl text-center py-10'>Enabling you to reach your destination whilst saving you money and stress!</h1>
+        <p className='font-normal text-2xl text-center'><span className='spanOrange'>24/7</span> Support</p>
+      </div>
       <div className='reviewHomepage'>
         <TestimonalCard/>
       </div>

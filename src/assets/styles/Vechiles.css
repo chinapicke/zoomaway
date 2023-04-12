@@ -3,3 +3,10 @@
     height:40vh;
 }
 
+.indiviCar{
+    border: 5px solid black;
+}
+
+.bookBtn{
+    background-color: #FF8210;
+}

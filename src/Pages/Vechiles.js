@@ -1,6 +1,7 @@
 import React from 'react'
 import { carsAvailable } from '../assets/data/cars'
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
+import {Link, Route, Routes} from 'react-router-dom';
 import HeroBanner from '../components/HeroBanner';
 
 
@@ -8,16 +9,15 @@ import HeroBanner from '../components/HeroBanner';
 function Vechiles() {
     const navigate = useNavigate
 
-    const redirectHome = () => {
-    navigate('/')
-    }
+    
 
     return (
         <>
         <HeroBanner />
+        <h1 className='text-4xl font-bold'>Our Vechiles</h1>
         <div className='carCards grid grid-cols-2 md:grid-cols-3 gap-4'>
             {carsAvailable.map((card) =>
-                <div class=" indiviCarmax-w-sm m-5 border border-gray-200 rounded-lg shadow ">
+                <div class=" indiviCar max-w-sm m-5 border border-gray-200 rounded-lg shadow flex flex-col justify-between">
                     <a href="#">
                         <img className="rounded-t-lg" src={card.img} alt="" />
                     </a>
@@ -44,7 +44,11 @@ function Vechiles() {
                                 <p>Doors: {card.doors}</p>
                             </div>
                         </div>
-                        <button className='bg-gray-700' onClick={redirectHome}>Book Now</button>
+                        <Link to="/">
+                        <button className='bookBtn text-white text-md font-bold rounded-lg px-5 py-2.5 mr-2 mb-2 flex items-baseline' >
+                            Book Now</button>
+
+                        </Link>
                     </div>
                 </div>
             )}

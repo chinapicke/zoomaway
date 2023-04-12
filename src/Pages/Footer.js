@@ -5,11 +5,11 @@ import '../assets/styles/Footer.css'
 function Footer() {
   return (
     <>
-    <footer class="bg-white dark:bg-gray-900">
+    <footer class="bg-black">
     <div class="mx-auto w-full max-w-screen-xl">
       <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
         <div>
-            <h1 class="mb-6">Zoom<span>Away</span></h1>
+            <h1 class="mb-6 text-white">Zoom<span>Away</span></h1>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
                     <p>We have a range of vechiles to help you get to your destination by a click of a button.</p>

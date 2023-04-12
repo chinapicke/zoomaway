@@ -1,0 +1,51 @@
+.aboutFromHomepage{
+    text-align: center;
+    width: fit-content;
+    gap:5px;
+}
+
+.aboutImg{
+    position: relative;
+	overflow: hidden;
+    height:70vh;
+    width:50vw;
+}
+
+.aboutImgs{
+    position: absolute;
+	top: 0;
+	left: 0;
+    box-shadow: rgba(0,0,0,0.2) 10px 10px 10px;
+    width:40vw;
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	20% { opacity: 0; }
+	60% { opacity: 1; }
+	100% { opacity: 1; }
+}
+
+.fadeInClass {
+	animation-name: fadeIn;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+}
+
+.iconWrapper{
+    position: relative;
+    right: 115px;
+}
+
+
+
+.statIcon{
+    color: #FF8210;
+    font-size: 50px;
+}
+
+#carIcon, #mechanicIcon{
+    font-size: 60px;
+}
