@@ -5,8 +5,23 @@
 
 .indiviCar{
     border: 5px solid black;
+    box-shadow: 5px 5px gray;
 }
 
 .bookBtn{
+    font-size: large;
+    margin-left: 100px;
+    width:10vw;
     background-color: #FF8210;
+}
+
+.carPrice{
+    position: relative;
+    left: 130px;
+    bottom: 42px;
+    font-size: 30px;
+}
+
+.carInfo{
+    font-size: 20px;
 }

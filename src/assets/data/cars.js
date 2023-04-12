@@ -46,7 +46,7 @@ export const carsAvailable =[
         "key": 4,
         "title":"Volkswagen Polo",
         "img": require("../images/polo.png"),
-        "model": "Polo GT",
+        "model": "Polo",
         "make": "Volkswagen",
         "doors": 3,
         "seats": 5,
