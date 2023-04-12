@@ -19,7 +19,7 @@ function Vechiles() {
             {carsAvailable.map((card) =>
                 <div class=" indiviCar max-w-sm m-5 border border-gray-200 rounded-lg shadow flex flex-col justify-between">
                     <a href="#">
-                        <img src={card.img} alt="" />
+                        <img src={card.img} alt="car options" className="px-2" />
                     </a>
                     <div class="p-5 carContent">
                             <div className='carName mb-2 text-3xl font-bold tracking-tight '>
