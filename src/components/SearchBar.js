@@ -118,6 +118,7 @@ function SearchBar() {
 
 
   // To show text if there is no input
+
   const carError = selectCar === ''
   const destPError = selectPickup === ''
   const destDError = selectDropoff === ''
@@ -125,11 +126,10 @@ function SearchBar() {
   const timeDError = selectDTime === '' || selectDTime <= "07:00" || selectDTime >= "21:00"
   const datePError = selectPDate === ''
   const dateDError = selectDDate === ''
-
-
+  
   // Submit button disabled if inputs not filled in
   const validation = () => {
-    return carError & destPError & destPError & destDError & timePError & timeDError & datePError & dateDError
+    return (carError)+(destPError)+(destDError)+(timePError)+(timeDError)+(datePError)+(dateDError)
   }
 
   // date limit min and max
@@ -139,12 +139,14 @@ function SearchBar() {
     <form className="selectCarForm grid grid-cols-4 gird-rows-2" >
       <div>
         <div>
-          <label className="block">
+          <label className="inputFormLabel block"
+          id='carLabel'>
             Select a car
           </label>
           <select
             value={selectCar}
             onChange={carSelect}
+            className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center'
           >
             <option value="">--Select a car--</option>
 
@@ -163,13 +165,15 @@ function SearchBar() {
       </div>
 
       <div >
-        <label className="block">
+        <label className="inputFormLabel block"
+        id='pickUpDestLabel'>
           Pick-up Destination
         </label>
         <div>
           <select
             value={selectPickup}
             onChange={destPickUp}
+            className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center'
           >
             <option value="">--Select a destination--</option>
             {
@@ -186,7 +190,7 @@ function SearchBar() {
       </div>
 
       <div>
-        <label className="block">
+        <label className=" inputFormLabel block">
           Pick-up Date
         </label>
         <div>
@@ -194,6 +198,7 @@ function SearchBar() {
             format='yyyy-MM-dd'
             value={selectPDate}
             onChange={datePickUp}
+            className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center'
 
           />
           <span>
@@ -205,30 +210,32 @@ function SearchBar() {
       </div>
 
       <div>
-        <label className="block">
+        <label className="inputFormLabel block">
           Pick-up Time
         </label>
         <div>
           <input type="time"
-            className='timePickup'
+            className='searchBarInputs timePickup bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center'
             value={selectPTime}
             onChange={timePickUp}
           />
         </div>
         <span>
           {/* Condition that if selectCar = 0, then show the p tag with the error  */}
-          {timePError && showPtimeError ? <p className='validationText'>You did not select a pick-up time<br></br> between 07:00 and 21:00 </p> : null}</span>
+          {timePError && showPtimeError ? <p className='validationText'>You did not select a pick-up time between 07:00 and 21:00 </p> : null}</span>
       </div>
 
       <div>
         <div>
-          <label className="block" >
+          <label className="inputFormLabel block"
+          id='dropOffDestLabel' >
             Drop-off Destination
           </label>
           <div className="relative">
             <select
               value={selectDropoff}
               onChange={destDropOff}
+              className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center'
             >
               <option value="">--Select a destination--</option>
 
@@ -246,8 +253,8 @@ function SearchBar() {
         </div>
       </div>
 
-      <div className=''>
-        <label className="block">
+      <div>
+        <label className="inputFormLabel block">
           Drop-off Date
         </label>
         <div >
@@ -256,6 +263,7 @@ function SearchBar() {
             value={selectDDate}
             onChange={dateDropOff}
             min={minDate}
+            className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center'
           />
           <span>
             {/* Condition that if selectCar = 0, then show the p tag with the error  */}
@@ -265,22 +273,23 @@ function SearchBar() {
       </div>
 
         <div>
-          <label className="block">
+          <label className="inputFormLabel block">
             Drop-off Time
           </label>
           <div>
             <input type="time"
-              className='timePickup'
+              className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center'
               value={selectDTime}
               onChange={timeDropOff}></input>
             <span>
               {/* Condition that if selectCar = 0, then show the p tag with the error  */}
-              {timeDError && showDtimeError ? <p className='validationText'>You did not select a drop-off time<br></br>between 07:00 and 21:00</p> : null}</span>
+              {timeDError && showDtimeError ? <p className='validationText'>You did not select a drop-off time between 07:00 and 21:00</p> : null}</span>
 
           </div>
         </div>
 
-        <button className="bg-white w-24 h-12"
+        <button className="formSubmitBtn text-white bg-black hover:bg-gray-500 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 w-64 h-12"
+        type='button'
           onClick={formSubmit}
           disabled={validation()}>
           Submit
