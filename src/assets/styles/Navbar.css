@@ -6,3 +6,10 @@ span{
     font-weight: 750;
 }
 
+.signUpBtn{
+    background-color:rgba(255,130,16, 0.85);
+}
+
+.registerBtn{
+    border: black solid 2px;
+}

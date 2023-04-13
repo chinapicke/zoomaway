@@ -10,7 +10,7 @@ function AboutIcons() {
   return (
     <div className='processes'>
       <div className='onlineSelect '>
-        <div className='iconWrapper' id='laptopWrapper'>
+        <div className='iconWrapper pb-4' id='laptopWrapper'>
           <FontAwesomeIcon icon={faLaptop} className='aboutIcon w-12 h-10' style={{ color: "#000000", }} id='laptopIcon' />
         </div>
         <h1 className='homepageSteps underline underline-offset-2'>Step 1</h1>

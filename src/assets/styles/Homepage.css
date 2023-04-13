@@ -95,7 +95,7 @@
     margin-top:80px;
     background-color: black;
     color: white;
-    height: 35vh;
+    height: 200px;
 }
 
 tbody{
@@ -173,7 +173,6 @@ caption{
     margin-bottom:5px;
     margin-top:5px;
     font-size:18px;
-    
 }
 
 #carLabel{

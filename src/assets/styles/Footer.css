@@ -32,11 +32,22 @@
 
 .callUs{
     background-color: black;
-    height:25vh;
+    height:130px;
     margin-bottom: 20px;
+    font-size: 50px;
 }
 
 .numberAndIcon{
     color:#FF8210;
 }
 
+.footerBtn{
+    font-size:15px;
+    font-weight: 599;
+    margin-top:10px;
+    width:255px;
+}
+
+.footerSubheadings{
+    font-weight: 500;
+}

@@ -7,14 +7,14 @@ function Footer() {
   return (
     <>
     <div className="callUs">
-        <h1 className='text-white text-5xl text-center pt-10'>Call us on <span className='numberAndIcon'>0208 123 4567<FontAwesomeIcon icon={faPhoneFlip} /></span></h1>
+        <h1 className='text-white text-center pt-6'>Call us on <span className='numberAndIcon'>0208 123 4567<FontAwesomeIcon icon={faPhoneFlip} /></span></h1>
     </div>
-    <footer class="bg-gray-500">
+    <footer class="bg-zinc-700">
     <div class="mx-auto w-full max-w-screen-xl">
       <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
         <div>
             <h1 class="mb-6 text-white">Zoom<span>Away</span></h1>
-            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+            <ul class="text-black footerSubheadings">
                 <li class="mb-4">
                     <p>We have a range of vechiles to help you get to your destination by a click of a button.</p>
                 </li>
@@ -27,9 +27,9 @@ function Footer() {
             </ul>
         </div>
         <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
-            <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
+            <h2 class="mb-8 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
+            <ul class="text-black footerSubheadings">
+                <li class="mb-4 ">
                     <a href="#" class="hover:underline">Careers</a>
                 </li>
                 <li class="mb-4">
@@ -44,8 +44,8 @@ function Footer() {
             </ul>
         </div>
         <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Working Hours</h2>
-            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+            <h2 class="mb-8 text-sm font-semibold text-gray-900 uppercase dark:text-white">Working Hours</h2>
+            <ul class="text-black footerSubheadings">
                 <li class="mb-4">
                     Mon-Sat: 07:00-21:00
                 </li>
@@ -60,16 +60,17 @@ function Footer() {
         </div>
         <div>
             <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Subscription</h2>
-            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+            <ul class="text-black footerSubheadings">
                 <li class="mb-4">
                     Sign up for exclusive promotions and our monthly newsletter
                 </li>
                 </ul>
                 <input 
                 type="text"
-                className= "flex"
+                className= "flex bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center"
                 placeholder='Email address'></input>
-                <button>Submit</button>
+                <button
+                className='footerBtn bg-black text-white rounded-lg text-sm px-5 py-2.5 mb-2 '>Submit</button>
 
         </div>
     </div>
