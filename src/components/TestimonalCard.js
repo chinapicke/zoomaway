@@ -43,12 +43,12 @@ function TestimonalCard() {
                   className="h-16 w-16 rounded-full object-cover"
                 />
 
-                <div className="text-xl underline underline-offset-2">
-                  <p className="font-medium">{review.name}</p>
+                <div className="reviewText text-xl underline underline-offset-2">
+                  <p className="reviewerName font-medium">{review.name}</p>
                 </div>
               </div>
 
-              <p className="relative mt-4 text-gray-500 text-xl italic">
+              <p className="reviewQuote relative mt-4 text-gray-500 text-xl italic">
                 <span>&ldquo;</span>
                 {review.review}
 

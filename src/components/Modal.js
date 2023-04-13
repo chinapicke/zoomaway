@@ -96,20 +96,20 @@ function Modal({ open, onClose }) {
 
     if (!open) return null;
     return (
-        <div className="justify-center items-center flex h-full fixed inset-0 z-50 outline-none focus:outline-none"
+        <div className=" modalPopup justify-center items-center flex h-full fixed inset-0 z-50 outline-none focus:outline-none"
             onClick={onClose}>
             <div className="relative w-auto my-6 mx-auto max-w-3xl"
                 onClick={(e) => e.stopPropagation()}>
                 <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                     <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                        <h3 className="text-3xl font-semibold">
+                        <h3 className="modalHeading text-3xl font-semibold">
                             Nearly there..
                         </h3>
                         <button onClick={onClose}>
                             <FontAwesomeIcon icon={faXmark} />
                         </button>
                     </div>
-                    <div className="relative p-6 flex-auto">{
+                    <div className=" modalContent relative p-6 flex-auto">{
                         newList.map((data) =>
                             <>
 
@@ -125,18 +125,18 @@ function Modal({ open, onClose }) {
                     }
                     </div>
                     <form>
-                        <div className="grid md:grid-cols-2 sm:gap-5">
+                        <div className="modalForm grid md:grid-cols-2 sm:gap-5">
                             <div className=" z-0 w-full mb-6 group">
                                 <input type="text"
-                                    className='bg-gray-300'
+                                    className='fName bg-gray-300'
                                     value={fName}
                                     onChange={fnameEnter}
                                 />
-                                <label >First name</label>
+                                <label>First name</label>
                             </div>
                             <div className=" z-0 w-full mb-6 group">
                                 <input type="text"
-                                    className='bg-gray-300'
+                                    className='lName bg-gray-300'
                                     value={lName}
                                     onChange={lnameEnter} />
                                 <label>Last name</label>
@@ -144,7 +144,7 @@ function Modal({ open, onClose }) {
                         </div>
                         <div className=" z-0 w-full mb-6 group">
                             <input type="email"
-                                className='bg-gray-300 w-96'
+                                className='email bg-gray-300 w-96'
                                 value={email}
                                 onChange={emailEnter}
                                 />
@@ -153,7 +153,7 @@ function Modal({ open, onClose }) {
                         <div className="grid md:grid-cols-2 md:gap-6">
                             <div className=" z-0 w-full mb-6 group">
                                 <input type="number"
-                                    className='bg-gray-300'
+                                    className='age bg-gray-300'
                                     value={age}
                                     onChange={ageEnter}
                                     min="18"
@@ -164,7 +164,7 @@ function Modal({ open, onClose }) {
                             </div>
                             <div className=" z-0 w-full mb-6 group">
                                 <input type="tel"
-                                    className='bg-gray-300'
+                                    className='phoneNumber bg-gray-300'
                                     value={telephone}
                                     onChange={telephoneEnter}
                                     />
@@ -174,7 +174,7 @@ function Modal({ open, onClose }) {
                     </form>
                     <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                         <button
-                            className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                            className="emailSentBtn bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                             type="button"
                             onClick={sendEmail}
                             disabled={validation()}>
