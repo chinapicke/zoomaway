@@ -24,7 +24,7 @@ function VechileCarousel() {
 
     return (
         <>
-            <h1 className='carNameCarousel text-3xl font-bold text-center uppercase'>{show.model} {show.make}</h1>
+            <h1 className='carNameCarousel text-4xl font-bold text-center mb-10'>Our vechiles</h1>
             <div className="carousel">
                 <div className='carImg'>
                     <img src={carImage.img} height="300" width="500" alt='Main' />
