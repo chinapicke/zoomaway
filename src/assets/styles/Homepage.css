@@ -27,6 +27,7 @@
     font-family: "Lucida Console", "Courier New", monospace;
     width:250px;
     padding-top:3px;
+    font-weight: 599;
 }
 
 .iconWrapper{
@@ -161,7 +162,7 @@ caption{
 }
 
 .formSubmitBtn{
-    margin-top:25px;
+    margin-top:37px;
 }
 .searchBarInputs{
     font-size: 16px;
