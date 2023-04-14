@@ -129,7 +129,8 @@ function SearchBar() {
   
   // Submit button disabled if inputs not filled in
   const validation = () => {
-    return (carError)+(destPError)+(destDError)+(timePError)+(timeDError)+(datePError)+(dateDError)
+    return (carError)
+    // +(destPError)+(destDError)+(timePError)+(timeDError)+(datePError)+(dateDError)
   }
 
   // date limit min and max
@@ -288,7 +289,7 @@ function SearchBar() {
           </div>
         </div>
 
-        <button className="formSubmitBtn text-white bg-black hover:bg-gray-500 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 w-64 h-12"
+        <button className="formSubmitBtn text-white bg-black focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 w-64 h-12"
         type='button'
           onClick={formSubmit}
           disabled={validation()}>

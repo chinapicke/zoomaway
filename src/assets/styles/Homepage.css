@@ -184,9 +184,33 @@ caption{
     margin-left:40px;
 }
 
-button:disabled,
-button[disabled]{
-  border: 1px solid #999999;
-  background-color: #cccccc;
-  color: #666666;
+.modalPopup{
+    color:black;
+}
+
+.wasPicked{
+    column-count: 2;
+}
+
+.email{
+    width: 92%;
+}
+
+.modalImg{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:auto;
+}
+
+.emailSentBtn:disabled, .formSubmitBtn:disabled{
+    background-color: 	rgb(169,169,169, 0.5)
+}
+
+.formSubmitBtn:hover{
+    outline: 4px solid black;
+    outline-offset: 3px;
+}
+.formSubmitBtn:hover:disabled{
+    outline:0px;
 }

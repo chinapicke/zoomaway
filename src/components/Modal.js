@@ -58,12 +58,12 @@ function Modal({ open, onClose }) {
                 phone: telephone
             }
         ]
-        
+
         userDetailList = [...information, ...userDetails]
         setUserDetails(userDetailList)
         console.log(userDetailList)
         onClose()
-       
+
     }
 
     const fnameEnter = (e) => {
@@ -83,28 +83,29 @@ function Modal({ open, onClose }) {
     }
 
     // to show text if the input is blank 
-    const fNameError = fName ===""
-    const lNameError = lName ===""
-    const emailError = email ===""
-    const ageError = age ===""
-    const phoneError = telephone ===""
+    const fNameError = fName === "" 
+    const lNameError = lName === ""
+    const emailError = email === ""
+    const ageError = age === ""
+    const phoneError = telephone === ""
+
 
     const validation = () => {
-        return fNameError, lNameError, emailError, ageError, phoneError
-      }
-      
+        return (fNameError)+(lNameError)+(emailError)+(ageError)+(phoneError)
+    }
+
 
     if (!open) return null;
     return (
-        <div className=" modalPopup justify-center items-center flex h-full fixed inset-0 z-50 outline-none focus:outline-none"
+        <div className=" modalPopup w-full fixed inset-0 outline-none focus:outline-none bg-gray-900 bg-opacity-50"
             onClick={onClose}>
-            <div className="relative w-auto my-6 mx-auto max-w-3xl"
+            <div className="relative w-auto my-3 mx-auto max-w-3xl"
                 onClick={(e) => e.stopPropagation()}>
                 <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                    <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                        <h3 className="modalHeading text-3xl font-semibold">
-                            Nearly there..
-                        </h3>
+                    <div className="flex items-start justify-between p-3 border-b border-solid border-slate-200 rounded-t">
+                        <h1 className="modalHeading font-black text-3xl font-semibold w-full text-center">
+                            Nearly there...
+                        </h1>
                         <button onClick={onClose}>
                             <FontAwesomeIcon icon={faXmark} />
                         </button>
@@ -113,66 +114,69 @@ function Modal({ open, onClose }) {
                         newList.map((data) =>
                             <>
 
-                                <h4> Please fill in the below form and submit to send us your enquiry</h4>
-                                <img src={carUrl(data)} className='w-54 h-48 modalImg' alt='Your selected car' />
-                                <h1 className='modalInput' id='modalCar'>Car: {data.car}</h1>
-                                <h2 className='modalInput' id='modalPickup'>Pick up desination: {data.pickup}</h2>
-                                <h3 className='modalInput' id='modalPDateTime'>Pick up time and date: {data.pickupDate} {data.pickupTime}</h3>
-                                <h2 className='modalInput' id='modalDropoff'>Drop off desination: {data.dropoff}</h2>
-                                <h3 className='modalInput' id='modalDDateTime'>Drop off time and date: {data.dropDate} {data.dropTime}</h3>
+                                <h2 className='text-lg'> Please fill in and sumbit the form below to send us your enquiry.</h2>
+                                <img src={carUrl(data)} className=' h-48 modalImg justify-center' alt='Your selected car' />
+                                <div className='wasPicked text-left'>
+                                    <h3 className='modalInput' id='modalCar'>Car:  <span className='text-base'>{data.car}</span></h3>
+                                    <h3 className='modalInput' id='modalPickup'>Pick up desination: <span className='text-base'>{data.pickup}</span></h3>
+                                    <h3 className='modalInput' id='modalPDateTime'>Pick up time and date: <span className='text-base'> {data.pickupDate} {data.pickupTime}</span></h3>
+                                    <h3 className='modalInput' id='modalDropoff'>Drop off desination: <span className='text-base'>{data.dropoff}</span> </h3>
+                                    <h3 className='modalInput' id='modalDDateTime'>Drop off time and date: <span className='text-base'>{data.dropDate} {data.dropTime}</span> </h3>
+                                </div>
                             </>)
 
                     }
                     </div>
                     <form>
                         <div className="modalForm grid md:grid-cols-2 sm:gap-5">
-                            <div className=" z-0 w-full mb-6 group">
+                            <div className=" w-full pr-8 mb-2 group">
+                            <label>First name:</label>
                                 <input type="text"
-                                    className='fName bg-gray-300'
+                                    className='fName ml-2 bg-gray-300 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  w-64 p-1 text-center'
                                     value={fName}
                                     onChange={fnameEnter}
                                 />
-                                <label>First name</label>
                             </div>
-                            <div className=" z-0 w-full mb-6 group">
+                            <div className="pr-8 w-full group">
+                            <label>Last name:</label>
                                 <input type="text"
-                                    className='lName bg-gray-300'
+                                    className='lName ml-2 bg-gray-300 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  w-64 p-1 text-center'
                                     value={lName}
                                     onChange={lnameEnter} />
-                                <label>Last name</label>
                             </div>
                         </div>
-                        <div className=" z-0 w-full mb-6 group">
+                        <div className="w-full px-8 group">
+                        <label>Email:</label>
                             <input type="email"
-                                className='email bg-gray-300 w-96'
+                                className='email ml-2 mb-2 bg-gray-300  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  p-1 text-center'
                                 value={email}
                                 onChange={emailEnter}
-                                />
-                            <label >Email address</label>
+                            />
                         </div>
-                        <div className="grid md:grid-cols-2 md:gap-6">
-                            <div className=" z-0 w-full mb-6 group">
+                        <div className="mb-2 grid md:grid-cols-2 md:gap-6">
+                            <div className=" ml-1 w-full group">
+                            <label>Age:</label>
                                 <input type="number"
-                                    className='age bg-gray-300'
+                                    className='age ml-2 bg-gray-300 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  w-64 p-1 text-center'
                                     value={age}
                                     onChange={ageEnter}
                                     min="18"
                                     max='120'
-                                    />
-                                    {/* Need to limit lowest number user can input  */}
-                                <label>Age</label>
+                                />
+                                {/* Need to limit lowest number user can input  */}
+
                             </div>
-                            <div className=" z-0 w-full mb-6 group">
+                            <div className="pr-3 w-full group">
+                            <label className='break-words'>Phone:</label>
                                 <input type="tel"
-                                    className='phoneNumber bg-gray-300'
+                                    className='phoneNumber ml-2 bg-gray-300 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  w-64 p-1 text-center'
                                     value={telephone}
                                     onChange={telephoneEnter}
-                                    />
-                                <label>Phone number</label>
+                                />
                             </div>
                         </div>
                     </form>
-                    <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                    <div className="flex items-center justify-center p-3 border-t border-solid border-slate-200 rounded-b">
                         <button
                             className="emailSentBtn bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                             type="button"
