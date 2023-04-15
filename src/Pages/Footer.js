@@ -9,59 +9,59 @@ function Footer() {
     <div className="callUs">
         <h1 className='text-white text-center pt-6'>Call us on <span className='numberAndIcon'>0208 123 4567<FontAwesomeIcon icon={faPhoneFlip} /></span></h1>
     </div>
-    <footer class="bg-zinc-700">
-    <div class="mx-auto w-full max-w-screen-xl">
-      <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+    <footer className="bg-zinc-700">
+    <div className="mx-auto w-full max-w-screen-xl">
+      <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
         <div>
-            <h1 class="mb-6 text-white">Zoom<span>Away</span></h1>
-            <ul class="text-black footerSubheadings">
-                <li class="mb-4">
+            <h1 className="mb-6 text-white">Zoom<span>Away</span></h1>
+            <ul className="text-black footerSubheadings">
+                <li className="mb-4">
                     <p>We have a range of vechiles to help you get to your destination by a click of a button.</p>
                 </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline"> 0208 123 4567 </a>
+                <li className="mb-4">
+                    <a href="#" className="hover:underline"> 0208 123 4567 </a>
                 </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">zoomaway@gmail.com</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h2 class="mb-8 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
-            <ul class="text-black footerSubheadings">
-                <li class="mb-4 ">
-                    <a href="#" class="hover:underline">Careers</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">How we work</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Press</a>
-                </li>
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Community</a>
+                <li className="mb-4">
+                    <a href="#" className="hover:underline">zoomaway@gmail.com</a>
                 </li>
             </ul>
         </div>
         <div>
-            <h2 class="mb-8 text-sm font-semibold text-gray-900 uppercase dark:text-white">Working Hours</h2>
-            <ul class="text-black footerSubheadings">
-                <li class="mb-4">
+            <h2 className="mb-8 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
+            <ul className="text-black footerSubheadings">
+                <li className="mb-4 ">
+                    <a href="#" className="hover:underline">Careers</a>
+                </li>
+                <li className="mb-4">
+                    <a href="#" className="hover:underline">How we work</a>
+                </li>
+                <li className="mb-4">
+                    <a href="#" className="hover:underline">Press</a>
+                </li>
+                <li className="mb-4">
+                    <a href="#" className="hover:underline">Community</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 className="mb-8 text-sm font-semibold text-gray-900 uppercase dark:text-white">Working Hours</h2>
+            <ul className="text-black footerSubheadings">
+                <li className="mb-4">
                     Mon-Sat: 07:00-21:00
                 </li>
-                <li class="mb-4">
+                <li className="mb-4">
                  Sunday: Closed
                 </li>
-                <li class="mb-4">
+                <li className="mb-4">
                  Public Holidays: Closed
                 </li>
 
             </ul>
         </div>
         <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Subscription</h2>
-            <ul class="text-black footerSubheadings">
-                <li class="mb-4">
+            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Subscription</h2>
+            <ul className="text-black footerSubheadings">
+                <li className="mb-4">
                     Sign up for exclusive promotions and our monthly newsletter
                 </li>
                 </ul>

@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import { newList } from './SearchBar'
 import { carsAvailable } from '../assets/data/cars'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser';
 
 let userDetailList = ([])
 function Modal({ open, onClose }) {
@@ -41,6 +42,8 @@ function Modal({ open, onClose }) {
     const [telephone, setTelephone] = useState('')
     const [userDetails, setUserDetails] = useState([])
 
+    const form = useRef();
+
     const sendEmail = (e) => {
         e.preventDefault()
         setFName("")
@@ -62,8 +65,16 @@ function Modal({ open, onClose }) {
         userDetailList = [...information, ...userDetails]
         setUserDetails(userDetailList)
         console.log(userDetailList)
-        onClose()
+        
 
+        emailjs.sendForm('zoom.away2023', 'template_v8mm9ng', form.current, '6lLJPwhSduTTQoF0a')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          
+        // onClose()
     }
 
     const fnameEnter = (e) => {
@@ -95,6 +106,7 @@ function Modal({ open, onClose }) {
     }
 
 
+
     if (!open) return null;
     return (
         <div className=" modalPopup w-full fixed inset-0 outline-none focus:outline-none bg-gray-900 bg-opacity-50"
@@ -117,17 +129,17 @@ function Modal({ open, onClose }) {
                                 <h2 className='text-lg'> Please fill in and sumbit the form below to send us your enquiry.</h2>
                                 <img src={carUrl(data)} className=' h-48 modalImg justify-center' alt='Your selected car' />
                                 <div className='wasPicked text-left'>
-                                    <h3 className='modalInput' id='modalCar'>Car:  <span className='text-base'>{data.car}</span></h3>
-                                    <h3 className='modalInput' id='modalPickup'>Pick up desination: <span className='text-base'>{data.pickup}</span></h3>
-                                    <h3 className='modalInput' id='modalPDateTime'>Pick up time and date: <span className='text-base'> {data.pickupDate} {data.pickupTime}</span></h3>
-                                    <h3 className='modalInput' id='modalDropoff'>Drop off desination: <span className='text-base'>{data.dropoff}</span> </h3>
-                                    <h3 className='modalInput' id='modalDDateTime'>Drop off time and date: <span className='text-base'>{data.dropDate} {data.dropTime}</span> </h3>
+                                    <h3 className='modalInput' id='modalCar' name='car_type'>Car:  <span className='text-base'>{data.car}</span></h3>
+                                    <h3 className='modalInput' id='modalPickup' name='pickUp_date'>Pick up desination: <span className='text-base'>{data.pickup}</span></h3>
+                                    <h3 className='modalInput' id='modalPDateTime' name='pickUp_time'>Pick up time and date: <span className='text-base'> {data.pickupDate} {data.pickupTime}</span></h3>
+                                    <h3 className='modalInput' id='modalDropoff' name='dropOff_date'>Drop off desination: <span className='text-base'>{data.dropoff}</span> </h3>
+                                    <h3 className='modalInput' id='modalDDateTime' name='dropOff_time'>Drop off time and date: <span className='text-base'>{data.dropDate} {data.dropTime}</span> </h3>
                                 </div>
                             </>)
 
                     }
                     </div>
-                    <form>
+                    <form ref={form}>
                         <div className="modalForm grid md:grid-cols-2 sm:gap-5">
                             <div className=" w-full pr-8 mb-2 group">
                             <label>First name:</label>
@@ -135,6 +147,7 @@ function Modal({ open, onClose }) {
                                     className='fName ml-2 bg-gray-300 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  w-64 p-1 text-center'
                                     value={fName}
                                     onChange={fnameEnter}
+                                    name='first_name'
                                 />
                             </div>
                             <div className="pr-8 w-full group">
@@ -142,7 +155,9 @@ function Modal({ open, onClose }) {
                                 <input type="text"
                                     className='lName ml-2 bg-gray-300 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  w-64 p-1 text-center'
                                     value={lName}
-                                    onChange={lnameEnter} />
+                                    onChange={lnameEnter} 
+                                    name='last_name'/>
+                                    
                             </div>
                         </div>
                         <div className="w-full px-8 group">
@@ -151,6 +166,7 @@ function Modal({ open, onClose }) {
                                 className='email ml-2 mb-2 bg-gray-300  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  p-1 text-center'
                                 value={email}
                                 onChange={emailEnter}
+                                name='email'
                             />
                         </div>
                         <div className="mb-2 grid md:grid-cols-2 md:gap-6">
@@ -162,6 +178,7 @@ function Modal({ open, onClose }) {
                                     onChange={ageEnter}
                                     min="18"
                                     max='120'
+                                    name='age'
                                 />
                                 {/* Need to limit lowest number user can input  */}
 
@@ -172,6 +189,7 @@ function Modal({ open, onClose }) {
                                     className='phoneNumber ml-2 bg-gray-300 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  w-64 p-1 text-center'
                                     value={telephone}
                                     onChange={telephoneEnter}
+                                    name='phone_number'
                                 />
                             </div>
                         </div>

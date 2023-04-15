@@ -41,7 +41,7 @@ function MeetTeam() {
                     <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
                         <h2 className="meetPgTitle mb-4 text-5xl font-bold ">Our Team</h2>
                     </div>
-                    <div class="grid gap-8 mb-6 md:mb-4 md:grid-cols-2">
+                    <div className="grid gap-8 mb-6 md:mb-4 md:grid-cols-2">
                         {teamMembers.map((profile) =>
                             <div className="items-center bg-gray-50 rounded-lg shadow sm:flex  dark:border-gray-700">
                                 <img className="w-full rounded-lg md:rounded-none md:rounded-l-lg profileImg" src={profile.img} alt={profile.name} />
