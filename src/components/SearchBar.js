@@ -91,6 +91,7 @@ function SearchBar() {
     setShowModal(true)
     // disables button to be clicked twice
     e.currentTarget.disabled = true;
+
   }
 
   // getting the users input
@@ -125,7 +126,7 @@ function SearchBar() {
   const timePError = selectPTime === '' || selectPTime <= "07:00" || selectPTime >= "21:00"
   const timeDError = selectDTime === '' || selectDTime <= "07:00" || selectDTime >= "21:00"
   const datePError = selectPDate === ''
-  const dateDError = selectDDate === ''
+  const dateDError = selectDDate === '' || selectDDate < selectPDate
   
   // Submit button disabled if inputs not filled in
   const validation = () => {
@@ -199,6 +200,7 @@ function SearchBar() {
             format='yyyy-MM-dd'
             value={selectPDate}
             onChange={datePickUp}
+            min={minDate}
             className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center'
 
           />
@@ -268,7 +270,7 @@ function SearchBar() {
           />
           <span>
             {/* Condition that if selectCar = 0, then show the p tag with the error  */}
-            {dateDError && showDdateError ? <p className='validationText'>You did not select a drop-off date</p> : null}</span>
+            {dateDError && showDdateError ? <p className='validationText'>You did not select a drop-off date after pick-up date</p> : null}</span>
 
         </div>
       </div>

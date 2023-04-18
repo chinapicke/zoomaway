@@ -43,6 +43,7 @@ function Modal({ open, onClose }) {
     const [userDetails, setUserDetails] = useState([])
 
     const form = useRef();
+    // const info = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault()
@@ -74,7 +75,7 @@ function Modal({ open, onClose }) {
               console.log(error.text);
           });
           
-        // onClose()
+        onClose()
     }
 
     const fnameEnter = (e) => {
