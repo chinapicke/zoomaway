@@ -123,15 +123,14 @@ function SearchBar() {
   const carError = selectCar === ''
   const destPError = selectPickup === ''
   const destDError = selectDropoff === ''
-  const timePError = selectPTime === '' || selectPTime <= "07:00" || selectPTime >= "21:00"
-  const timeDError = selectDTime === '' || selectDTime <= "07:00" || selectDTime >= "21:00"
+  const timePError = selectPTime === '' || selectPTime <= "07:00" || selectPTime >= "21:00" 
+  const timeDError = selectDTime === '' || selectDTime <= "07:00" || selectDTime >= "21:00" || selectDTime <= selectPTime && selectPDate === selectDDate
   const datePError = selectPDate === ''
   const dateDError = selectDDate === '' || selectDDate < selectPDate
   
   // Submit button disabled if inputs not filled in
   const validation = () => {
-    return (carError)
-    // +(destPError)+(destDError)+(timePError)+(timeDError)+(datePError)+(dateDError)
+    return (carError)+(destPError)+(destDError)+(timePError)+(timeDError)+(datePError)+(dateDError)
   }
 
   // date limit min and max
@@ -225,7 +224,7 @@ function SearchBar() {
         </div>
         <span>
           {/* Condition that if selectCar = 0, then show the p tag with the error  */}
-          {timePError && showPtimeError ? <p className='validationText'>You did not select a pick-up time between 07:00 and 21:00 </p> : null}</span>
+          {timePError && showPtimeError ? <p className='validationText'>You did not select a pick-up time between 07:00-21:00 </p> : null}</span>
       </div>
 
       <div>
@@ -286,7 +285,7 @@ function SearchBar() {
               onChange={timeDropOff}></input>
             <span>
               {/* Condition that if selectCar = 0, then show the p tag with the error  */}
-              {timeDError && showDtimeError ? <p className='validationText'>You did not select a drop-off time between 07:00 and 21:00</p> : null}</span>
+              {timeDError && showDtimeError ? <p className='validationText'>You did not select a drop-off time between 07:00-21:00 or after your pick-up time</p> : null}</span>
 
           </div>
         </div>

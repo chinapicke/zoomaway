@@ -2,8 +2,33 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhoneFlip  } from '@fortawesome/free-solid-svg-icons'
 import '../assets/styles/Footer.css'
+import {useRef, useState } from 'react'
+    import emailjs from '@emailjs/browser';
 
 function Footer() {
+
+    const [emailSubscription, setEmailSubscription] = useState('')
+    const [clicked, setClicked] = useState(false);
+    const [buttonText, setButtonText] = useState('Submit');
+
+    const subscription  = useRef()
+    const sendSubscription = (e) => {
+        e.preventDefault();
+        setEmailSubscription("")
+    emailjs.sendForm('zoom.away2023', 'template_mdo1ekx', subscription.current, '6lLJPwhSduTTQoF0a')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+    setClicked(!clicked);
+    setButtonText('Submitted');
+}
+
+const footerEmailEnter = (e) => {
+    setEmailSubscription(e.target.value)
+}
+
   return (
     <>
     <div className="callUs">
@@ -19,7 +44,7 @@ function Footer() {
                     <p>We have a range of vechiles to help you get to your destination by a click of a button.</p>
                 </li>
                 <li className="mb-4">
-                    <a href="#" className="hover:underline"> 0208 123 4567 </a>
+                    <a  className="hover:underline"> 0208 123 4567 </a>
                 </li>
                 <li className="mb-4">
                     <a href="#" className="hover:underline">zoomaway@gmail.com</a>
@@ -65,12 +90,20 @@ function Footer() {
                     Sign up for exclusive promotions and our monthly newsletter
                 </li>
                 </ul>
-                <input 
+                <form ref={subscription} onSubmit={sendSubscription}> 
+                <input  
                 type="text"
-                className= "flex bg-white border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center"
-                placeholder='Email address'></input>
+                className= "flex bg-white border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center"
+                placeholder='Email address'
+                onChange={footerEmailEnter}
+                value={emailSubscription}
+                name='newsletterEmail'
+                ></input>
                 <button
-                className='footerBtn bg-black text-white rounded-lg text-sm px-5 py-2.5 mb-2 '>Submit</button>
+                className='footerBtn bg-black text-white rounded-lg text-sm px-5 py-2.5 mb-2'
+                style={{ backgroundColor: clicked ? "green" : "black" }}
+                >{buttonText}</button>
+                </form>
 
         </div>
     </div>
