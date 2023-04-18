@@ -1,9 +1,9 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhoneFlip  } from '@fortawesome/free-solid-svg-icons'
+import { faPhoneFlip} from '@fortawesome/free-solid-svg-icons'
 import '../assets/styles/Footer.css'
 import {useRef, useState } from 'react'
-    import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 
 function Footer() {
 
@@ -22,7 +22,7 @@ function Footer() {
         console.log(error.text);
     });
     setClicked(!clicked);
-    setButtonText('Submitted');
+    setButtonText('Submitted!');
 }
 
 const footerEmailEnter = (e) => {
@@ -43,41 +43,41 @@ const footerEmailEnter = (e) => {
                 <li className="mb-4">
                     <p>We have a range of vechiles to help you get to your destination by a click of a button.</p>
                 </li>
-                <li className="mb-4">
-                    <a  className="hover:underline"> 0208 123 4567 </a>
+                <li className="mb-4 orangeText hover:underline">
+                    0208 123 4567
                 </li>
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">zoomaway@gmail.com</a>
+                <li className="mb-4 orangeText hover:underline" onClick={() => window.location = 'mailto:zoom.away2023@gmail.com'}>
+                zoom.away2023@gmail.com
                 </li>
             </ul>
         </div>
         <div>
             <h2 className="mb-8 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
             <ul className="text-black footerSubheadings">
-                <li className="mb-4 ">
-                    <a href="#" className="hover:underline">Careers</a>
+                <li className="mb-4 hover:underline">
+                    Careers
                 </li>
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">How we work</a>
+                <li className="mb-4 hover:underline">
+                    How we work
                 </li>
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">Press</a>
+                <li className="mb-4 hover:underline">
+                    Press
                 </li>
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">Community</a>
+                <li className="mb-4 hover:underline">
+                    Community
                 </li>
             </ul>
         </div>
         <div>
             <h2 className="mb-8 text-sm font-semibold text-gray-900 uppercase dark:text-white">Working Hours</h2>
-            <ul className="text-black footerSubheadings">
-                <li className="mb-4">
-                    Mon-Sat: 07:00-21:00
+            <ul className="text-black font-bold footerSubheadings">
+                <li className="mb-4 orangeText">
+                Mon-Sat: 07:00-21:00
                 </li>
-                <li className="mb-4">
+                <li className="mb-4 orangeText">
                  Sunday: Closed
                 </li>
-                <li className="mb-4">
+                <li className="mb-4 orangeText">
                  Public Holidays: Closed
                 </li>
 
