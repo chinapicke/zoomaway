@@ -43,42 +43,6 @@
     padding: 20px;
 }
 
-/* .processes{
-    text-align: center;
-}
-
-.onlineSelect{
-    margin-top: 20px;
-    margin-bottom:0px;
-}
-
-#laptopWrapper{
-    float:right;
-    position: relative;
-    right: 300px;
-}
-
-#representativeWrapper{
-    position: relative;
-    top: 80px;
-    left: 220px;
-}
-
-.callRepresentative{
-    margin-right: 70px;
-    margin-top: 5px;
-}
-
-.driveAway{
-    margin-top: 90px;
-}
-
-#keysWrapper{
-    float:right;
-    position: relative;
-    right: 400px;
-} */
-
 .processes{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -213,4 +177,28 @@ caption{
 }
 .formSubmitBtn:hover:disabled{
     outline:0px;
+}
+
+.aboutHomepage{
+    width:100%;
+}
+
+.mobileItems{
+    width:100%;
+}
+
+.mobileItems li:hover{
+    text-decoration: underline solid #FF8210 3px;
+}
+
+@media (max-width: 1024px) and (min-width: 800px) {
+    .inputFormLabel{
+        margin-left: 20px;
+        margin-bottom:5px;
+        margin-top:5px;
+        font-size:18px;
+    }
+    }
+
+@media (max-width: 800px) {
 }

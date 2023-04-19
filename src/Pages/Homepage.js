@@ -62,7 +62,7 @@ function Homepage() {
       <div className='heroBackground'>
         <SearchBar />
       </div>
-      <div className='aboutHomepage ml-7'>
+      <div className='aboutHomepage w-1/3'>
         <AboutIcons />
       </div>
       <div className='vechileCarousel'>
