@@ -23,3 +23,16 @@ span{
         font-size: 30px;
     }
 }
+@media (min-width: 768px) {
+    .registerBtn,.signUpBtn{
+        padding: 10px;
+        font-size:20px;
+    }
+    .mobileBarIcon{
+        padding-top: 0px;
+        font-size: 25px;
+    }
+    .zoomText, .logoZoomText{
+        font-size:30px;
+    }
+}

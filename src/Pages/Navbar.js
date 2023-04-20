@@ -19,8 +19,8 @@ function Navbar() {
       <nav className="bg-white p-2">
         <div className="flex flex-wrap justify-between mx-auto ">
           <a href="/" className="flex">
-            <img src={PageLogo} className="h-12 item-start" alt="ZoomAway Logo" />
-            <span className="self-center text-md font-semibold whitespace-nowrap"><span className='logoZoomText'>Zoom</span>Away</span>
+            <img src={PageLogo} className="h-14 item-start" alt="ZoomAway Logo" />
+            <span className=" zoomText self-center text-md font-semibold whitespace-nowrap"><span className='logoZoomText'>Zoom</span>Away</span>
           </a>
           <div className="flex items-center lg:order-2 ">
             <a href="#" className="signUpBtn font-medium rounded-lg text-sm lg:text-lg mr-2 lg:px-2 lg:py-2 md:px-2 md:py-2 px-1 py-1" id='signupBtn'>Sign up</a>
