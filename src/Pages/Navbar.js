@@ -20,11 +20,11 @@ function Navbar() {
         <div className="flex flex-wrap justify-between mx-auto ">
           <a href="/" className="flex">
             <img src={PageLogo} className="h-12 item-start" alt="ZoomAway Logo" />
-            <span className="self-center text-lg font-semibold whitespace-nowrap"><span className='logoZoomText'>Zoom</span>Away</span>
+            <span className="self-center text-md font-semibold whitespace-nowrap"><span className='logoZoomText'>Zoom</span>Away</span>
           </a>
           <div className="flex items-center lg:order-2 ">
-            <a href="#" className="signUpBtn font-medium rounded-lg text-sm lg:text-lg px-2 py-2 mr-2" id='signupBtn'>Sign up</a>
-            <a href="#" className="registerBtn focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm lg:text-lg px-2 py-2">Register</a>
+            <a href="#" className="signUpBtn font-medium rounded-lg text-sm lg:text-lg mr-2 lg:px-2 lg:py-2 md:px-2 md:py-2 px-1 py-1" id='signupBtn'>Sign up</a>
+            <a href="#" className="registerBtn focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm lg:text-lg lg:px-2 lg:py-2 md:px-2 md:py-2 px-1 py-1">Register</a>
           </div>
           <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1 " id="menu-default">
             <ul className='navbarItems flex flex-col mt-4 text-lg font-medium md:flex-row md:space-x-8 md:mt-0 '>
@@ -39,8 +39,8 @@ function Navbar() {
               )}
             </ul>
           </div>
-          <div className='lg:hidden md:block sm:block pt-2' onClick={openDropdown}>
-            <FontAwesomeIcon icon={faBars} size="2x"/>
+          <div className='mobileBarIcon lg:hidden md:block sm:block pt-2' onClick={openDropdown}>
+            <FontAwesomeIcon icon={faBars} size="xl"/>
           </div>
           {mobileOpen?
             <ul className='mobileItems lg:hidden pt-8 block text-center text-2xl font-bold tracking-wide'>

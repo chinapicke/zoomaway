@@ -290,7 +290,7 @@ function SearchBar() {
           </div>
         </div>
 
-        <button className="formSubmitBtn text-white bg-black focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2  sm:w-full lg:w-64 h-12"
+        <button className="formSubmitBtn text-white bg-black focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 sm:w-full lg:w-64 h-12"
         type='button'
           onClick={formSubmit}
           disabled={validation()}>
