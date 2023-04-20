@@ -24,7 +24,7 @@ function VechileCarousel() {
 
     return (
         <>
-            <h1 className='carNameCarousel text-4xl font-bold mb-10'>Our vechiles</h1>
+            <h1 className='carNameCarousel text-4xl font-bold mb-10 lg:tex-5xl'>Our vechiles</h1>
             <div className="carousel">
                 <div className='carImg'>
                     <img src={carImage.img} height="300" width="500" alt='Main' />
@@ -36,7 +36,7 @@ function VechileCarousel() {
                             Price per day: £{show.pricePd}
                         </caption>
                         <tbody className='text-center'>
-                            <tr className="bg-white text-sm">
+                            <tr className="bg-white text-sm md:text-lg">
                                 <th scope="row" className='py-2'>
                                     Make
                                 </th>
@@ -44,7 +44,7 @@ function VechileCarousel() {
                                     {show.make}
                                 </td>
                             </tr>
-                            <tr className="bg-white text-sm">
+                            <tr className="bg-white text-sm md:text-lg">
                                 <th scope="row" className='py-2'>
                                     Model
                                 </th>
@@ -52,7 +52,7 @@ function VechileCarousel() {
                                     {show.model}
                                 </td>
                             </tr>
-                            <tr className="bg-white text-sm">
+                            <tr className="bg-white text-sm md:text-lg">
                                 <th scope="row" className='py-2'>
                                     Doors
                                 </th>
@@ -60,7 +60,7 @@ function VechileCarousel() {
                                     {show.doors}
                                 </td>
                             </tr>
-                            <tr className="bg-white text-sm">
+                            <tr className="bg-white text-sm md:text-lg">
                                 <th scope="row" className='py-2'>
                                     Seats
                                 </th>
@@ -68,7 +68,7 @@ function VechileCarousel() {
                                     {show.seats}
                                 </td>
                             </tr>
-                            <tr className="bg-white text-sm">
+                            <tr className="bg-white text-sm md:text-lg">
                                 <th scope="row" className='py-2'>
                                     Year
                                 </th>
@@ -76,7 +76,7 @@ function VechileCarousel() {
                                     {show.year}
                                 </td>
                             </tr>
-                            <tr className="bg-white text-sm">
+                            <tr className="bg-white text-sm md:text-lg">
                                 <th scope="row" className='py-2 pl-1'>
                                     Transmission
                                 </th>
@@ -84,7 +84,7 @@ function VechileCarousel() {
                                     {show.transmission}
                                 </td>
                             </tr>
-                            <tr className="bg-white text-sm">
+                            <tr className="bg-white text-sm md:text-lg">
                                 <th scope="row" className='py-2'>
                                     Fuel
                                 </th>

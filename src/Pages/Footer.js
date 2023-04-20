@@ -32,8 +32,8 @@ const footerEmailEnter = (e) => {
   return (
     <>
     <div className="callUs">
-        <h1 className='text-white text-center pt-6'>Call us on </h1>
-        <p className='numberAndIcon text-center font-bold'>0208 123 4567<FontAwesomeIcon icon={faPhoneFlip} /></p>
+        <h1 className='callUsText text-white text-center '>Call us on </h1>
+        <p className='numberAndIcon text-center font-bold '>0208 123 4567<FontAwesomeIcon icon={faPhoneFlip} /></p>
     </div>
     <footer className="bg-zinc-700">
     <div className="mx-auto w-full max-w-screen-xl">

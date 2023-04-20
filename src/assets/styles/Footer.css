@@ -63,9 +63,66 @@
 .orangeText{
     color: #FF8210;
 }
+.questionMark{
+    height:120px;
+    width:120px;
+}
 
 @media (max-width: 1024px) and (min-width: 800px) {
     .footerBtn, .footerEmail{
         width:180px;
+    }
+}
+
+@media (min-width: 640px) and (max-width:767px) {
+    .callUs{
+        font-size: 40px;
+    }
+    .footerBtn, .footerEmail{
+        width:280px;
+    }
+    .questionMark{
+        width:200px;
+        height:200px;
+    }
+
+    .questionAnswer{
+font-size:14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .callUs{
+        font-size: 40px;
+    }
+    
+    .footerBtn, .footerEmail{
+        width:180px;
+    }
+    .questionTitle{
+        font-size: 18px;
+    }
+    .questionMark{
+        width:230px;
+        height:230px;
+    }
+    .questionAnswer{
+        font-size:14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .questionMark{
+        width:280px;
+        height:280px;
+    }
+    .questionAnswer{
+        font-size:18px;
+    }
+    .questionTitle{
+        font-size: 22px;
+    }
+    .FAQwrapper{
+        margin-bottom: 110px;
     }
 }

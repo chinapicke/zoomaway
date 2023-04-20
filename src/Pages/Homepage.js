@@ -69,11 +69,11 @@ function Homepage() {
         <VechileCarousel />
       </div>
       <div className='textBanner'>
-        <h1 className='font-bold text-3xl text-center p-1.5'>Enabling you to reach your destination whilst saving you money and stress!</h1>
+        <h1 className='textBannerText font-bold text-3xl text-center p-1.5'>Enabling you to reach your destination whilst saving you money and stress!</h1>
         <p className='font-normal text-2xl text-center'><span className='spanOrange'>24/7</span> Support</p>
       </div>
       <div className="testimonials">
-        <h1 className='testimonialHeading text-4xl font-bold my-8 text-center'>Testimonials</h1>
+        <h1 className='testimonialHeading text-4xl font-bold my-8 text-center lg:tex-5xl'>Testimonials</h1>
         <h2 className='testimonialSubheading text-lg font-semibold text-center mb-10'>Hear from some of our happy customers...</h2>
         <div className='allReviews grid md:grid-cols-2 lg:grid-cols-3 gap-4 w-full p-5 mb-6'>
           {customerReviews.map((review) =>
@@ -102,7 +102,7 @@ function Homepage() {
         </div>
       </div>
       <div className='FAQsection'>
-      <h1 className='FAQTitle text-4xl font-bold pt-5 text-center mb-10'>Frequently Asked Questions</h1>
+      <h1 className='FAQTitle text-4xl font-bold pt-5 text-center mb-10 lg:tex-5xl'>Frequently Asked Questions</h1>
         <div className='FAQwrapper mb-5'>
           <div>
             <img src='http://clipart-library.com/new_gallery/135-1358536_index-of-transparent-background-question-mark-icon.png' alt='Question mark' className='questionMark w-32 h-32' />
