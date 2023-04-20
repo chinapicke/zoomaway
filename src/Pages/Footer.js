@@ -32,7 +32,8 @@ const footerEmailEnter = (e) => {
   return (
     <>
     <div className="callUs">
-        <h1 className='text-white text-center pt-6'>Call us on <span className='numberAndIcon'>0208 123 4567<FontAwesomeIcon icon={faPhoneFlip} /></span></h1>
+        <h1 className='text-white text-center pt-6'>Call us on </h1>
+        <p className='numberAndIcon text-center font-bold'>0208 123 4567<FontAwesomeIcon icon={faPhoneFlip} /></p>
     </div>
     <footer className="bg-zinc-700">
     <div className="mx-auto w-full max-w-screen-xl">
@@ -93,14 +94,14 @@ const footerEmailEnter = (e) => {
                 <form ref={subscription} onSubmit={sendSubscription}> 
                 <input  
                 type="text"
-                className= "flex bg-white border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center"
+                className= "footerEmail flex bg-white border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-32 lg:w-64 p-2.5 text-center"
                 placeholder='Email address'
                 onChange={footerEmailEnter}
                 value={emailSubscription}
                 name='newsletterEmail'
                 ></input>
                 <button
-                className='footerBtn bg-black text-white rounded-lg text-sm px-5 py-2.5 mb-2'
+                className='footerBtn bg-black text-white rounded-lg text-sm px-2 w-32 md:w-32 lg:w-64 lg:px-5 py-2.5 mb-2'
                 style={{ backgroundColor: clicked ? "green" : "black" }}
                 >{buttonText}</button>
                 </form>

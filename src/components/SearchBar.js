@@ -137,7 +137,7 @@ function SearchBar() {
   const minDate = (moment().format("YYYY-MM-DD"))
 
   return (
-    <form className="selectCarForm grid grid-cols-4 gird-rows-2" >
+    <form className="selectCarForm grid lg:gap-x-0.5 lg:grid-cols-4 md:grid-cols-3 sm:grid-col-1 sm:gap-x-0" >
       <div>
         <div>
           <label className="inputFormLabel block"
@@ -147,9 +147,9 @@ function SearchBar() {
           <select
             value={selectCar}
             onChange={carSelect}
-            className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center'
+            className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-40 sm:w-full lg:w-64 lg:p-2.5 p-1.5 text-center'
           >
-            <option value="">--Select a car--</option>
+            <option className='sm:text-lg'>--Select a car--</option>
 
             {
               carsAvailable.map((select) =>
@@ -174,7 +174,7 @@ function SearchBar() {
           <select
             value={selectPickup}
             onChange={destPickUp}
-            className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-32 lg:w-64 p-2.5 text-center'
+            className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  sm:w-full lg:w-64 lg:p-2.5 p-1.5 text-center'
           >
             <option value="">--Select a destination--</option>
             {
@@ -200,7 +200,7 @@ function SearchBar() {
             value={selectPDate}
             onChange={datePickUp}
             min={minDate}
-            className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center'
+            className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  sm:w-full lg:w-64 lg:p-2.5 p-0.5 text-center'
 
           />
           <span>
@@ -217,7 +217,7 @@ function SearchBar() {
         </label>
         <div>
           <input type="time"
-            className='searchBarInputs timePickup bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center'
+            className='searchBarInputs timePickup bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  sm:w-full lg:w-64 lg:p-2.5 p-0.5 text-center'
             value={selectPTime}
             onChange={timePickUp}
           />
@@ -237,7 +237,7 @@ function SearchBar() {
             <select
               value={selectDropoff}
               onChange={destDropOff}
-              className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center'
+              className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  sm:w-full lg:w-64 lg:p-2.5 p-1.5 text-center'
             >
               <option value="">--Select a destination--</option>
 
@@ -265,7 +265,7 @@ function SearchBar() {
             value={selectDDate}
             onChange={dateDropOff}
             min={minDate}
-            className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center'
+            className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  sm:w-full lg:w-64 lg:p-2.5 p-0.5 text-center'
           />
           <span>
             {/* Condition that if selectCar = 0, then show the p tag with the error  */}
@@ -280,7 +280,7 @@ function SearchBar() {
           </label>
           <div>
             <input type="time"
-              className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-64 p-2.5 text-center'
+              className='searchBarInputs bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  sm:w-full lg:w-64 lg:p-2.5 p-0.5 text-center'
               value={selectDTime}
               onChange={timeDropOff}></input>
             <span>
@@ -290,7 +290,7 @@ function SearchBar() {
           </div>
         </div>
 
-        <button className="formSubmitBtn text-white bg-black focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 w-64 h-12"
+        <button className="formSubmitBtn text-white bg-black focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2  sm:w-full lg:w-64 h-12"
         type='button'
           onClick={formSubmit}
           disabled={validation()}>

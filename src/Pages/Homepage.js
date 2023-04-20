@@ -62,20 +62,20 @@ function Homepage() {
       <div className='heroBackground'>
         <SearchBar />
       </div>
-      <div className='aboutHomepage w-1/3'>
+      <div className='aboutHomepage'>
         <AboutIcons />
       </div>
       <div className='vechileCarousel'>
         <VechileCarousel />
       </div>
       <div className='textBanner'>
-        <h1 className='font-bold text-4xl text-center py-10'>Enabling you to reach your destination whilst saving you money and stress!</h1>
+        <h1 className='font-bold text-3xl text-center p-1.5'>Enabling you to reach your destination whilst saving you money and stress!</h1>
         <p className='font-normal text-2xl text-center'><span className='spanOrange'>24/7</span> Support</p>
       </div>
       <div className="testimonials">
         <h1 className='testimonialHeading text-4xl font-bold my-8 text-center'>Testimonials</h1>
         <h2 className='testimonialSubheading text-lg font-semibold text-center mb-10'>Hear from some of our happy customers...</h2>
-        <div className='allReviews grid grid-cols-2 md:grid-cols-3 gap-4 w-full p-5 mb-6'>
+        <div className='allReviews grid md:grid-cols-2 lg:grid-cols-3 gap-4 w-full p-5 mb-6'>
           {customerReviews.map((review) =>
             <blockquote className=" individualReview bg-gray-100 p-8 h-100  ">
               <div className="flex items-center gap-4 viewedReview">
@@ -102,13 +102,12 @@ function Homepage() {
         </div>
       </div>
       <div className='FAQsection'>
-        {/* <h1 className='FAQTitle text-4xl font-bold pt-5 text-center mb-0'>Frequently Asked Questions</h1> */}
-        <div className='FAQwrapper grid grid-cols-2 mb-5'>
+      <h1 className='FAQTitle text-4xl font-bold pt-5 text-center mb-10'>Frequently Asked Questions</h1>
+        <div className='FAQwrapper mb-5'>
           <div>
-            <img src='http://clipart-library.com/new_gallery/135-1358536_index-of-transparent-background-question-mark-icon.png' alt='Question mark' className='questionMark w-80 h-80' />
+            <img src='http://clipart-library.com/new_gallery/135-1358536_index-of-transparent-background-question-mark-icon.png' alt='Question mark' className='questionMark w-32 h-32' />
           </div>
-          <div className='accordion w-2/3'>
-          <h1 className='FAQTitle text-4xl font-bold pt-5 text-center mb-10'>Frequently Asked Questions</h1>
+          <div className='accordion w-full'>
             {FAQquestions.map((item, i) =>
               <div className='item'>
                 <div className='questionTitle' onClick={() => openFAQ(i)}>

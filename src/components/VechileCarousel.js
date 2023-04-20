@@ -24,27 +24,27 @@ function VechileCarousel() {
 
     return (
         <>
-            <h1 className='carNameCarousel text-4xl font-bold text-center mb-10'>Our vechiles</h1>
+            <h1 className='carNameCarousel text-3xl font-bold mb-10'>Our vechiles</h1>
             <div className="carousel">
                 <div className='carImg'>
                     <img src={carImage.img} height="300" width="500" alt='Main' />
                 </div>
-                <div className='specsTable'>
+                <div className='specsTable mr-2 mb-2'>
                     {/* This shows the correct car spec when a certain car picture is picked with the id  */}
                     <table className="carSpecs">
-                        <caption className=" specPrice p-5 text-lg font-semibold text-center text-white">
+                        <caption className=" specPrice p-3 text-md font-semibold text-center text-white">
                             Price per day: £{show.pricePd}
                         </caption>
                         <tbody className='text-center'>
-                            <tr className="bg-white">
+                            <tr className="bg-white text-sm">
                                 <th scope="row" className='py-2'>
                                     Make
                                 </th>
-                                <td className='py-2'>
+                                <td className='py-2 pr-2'>
                                     {show.make}
                                 </td>
                             </tr>
-                            <tr className="bg-white">
+                            <tr className="bg-white text-sm">
                                 <th scope="row" className='py-2'>
                                     Model
                                 </th>
@@ -52,7 +52,7 @@ function VechileCarousel() {
                                     {show.model}
                                 </td>
                             </tr>
-                            <tr className="bg-white">
+                            <tr className="bg-white text-sm">
                                 <th scope="row" className='py-2'>
                                     Doors
                                 </th>
@@ -60,7 +60,7 @@ function VechileCarousel() {
                                     {show.doors}
                                 </td>
                             </tr>
-                            <tr className="bg-white">
+                            <tr className="bg-white text-sm">
                                 <th scope="row" className='py-2'>
                                     Seats
                                 </th>
@@ -68,7 +68,7 @@ function VechileCarousel() {
                                     {show.seats}
                                 </td>
                             </tr>
-                            <tr className="bg-white">
+                            <tr className="bg-white text-sm">
                                 <th scope="row" className='py-2'>
                                     Year
                                 </th>
@@ -76,15 +76,15 @@ function VechileCarousel() {
                                     {show.year}
                                 </td>
                             </tr>
-                            <tr className="bg-white">
-                                <th scope="row" className='py-2'>
+                            <tr className="bg-white text-sm">
+                                <th scope="row" className='py-2 pl-1'>
                                     Transmission
                                 </th>
                                 <td className='py-2'>
                                     {show.transmission}
                                 </td>
                             </tr>
-                            <tr className="bg-white">
+                            <tr className="bg-white text-sm">
                                 <th scope="row" className='py-2'>
                                     Fuel
                                 </th>
@@ -95,16 +95,16 @@ function VechileCarousel() {
                         </tbody>
                     </table>
                 </div>
-                <div className="pickCar flex flex-row">
+            </div>
+            <div className="pickCar flex flex-row">
                     {carsAvailable.map((cars, i) =>
                         <>
                             <div className="thumbnail" key={i}>
-                                <img className={carImage.id === i ? "clicked" : ""} src={cars.img} onClick={() => handleClick(i)} height="90" width="120" alt='thumbnail' />
+                                <img id={cars.model} className={carImage.id === i ? "clicked" : ""} src={cars.img} onClick={() => handleClick(i)} height="90" width="120" alt='thumbnail' />
                             </div>
                         </>
                     )}
                 </div>
-            </div>
             <div>
                 <Modal />
             </div>

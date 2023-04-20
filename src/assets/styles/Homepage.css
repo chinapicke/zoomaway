@@ -1,3 +1,4 @@
+/* Input and homepage img */
 .heroBackground{
     background-image: url(../images/bwcar.jpg);
     background-size: cover;
@@ -30,31 +31,39 @@
     font-weight: 599;
 }
 
-.iconWrapper{
-    background-color: #FF8210;
-    border-radius: 30% 70% 58% 42% / 30% 30% 70% 70% ;
-    width: 90px;
-}
-
-#laptopIcon{
-    padding: 20px;
-}
-#representativeIcon, #keygivingIcon{
-    padding: 20px;
+/* About section */
+.aboutIcon{
+    padding: 15px;
 }
 
 .processes{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     text-align: center;
-    gap: 20px;
+    place-items: center;
+    margin-left: 20px;
+    margin-top: 500px;
+}
+
+.aboutIcon{
+    display: inline;
+    background-color: #FF8210;
+    border-radius: 30% 70% 58% 42% / 30% 30% 70% 70% ;
 }
 
 .iconWrapper{
-    margin-top: 50px;
-    margin-left: 165px;
+    margin-top:30px;
+    /* margin-left: 120px; */
     margin-bottom: 30px;
+    display: inline;
+    justify-content:center;
 }
+
+.onlineSelect, .callRepresentative{
+    margin-bottom: 10px;
+}
+
+
 
 .textBanner{
     margin-top:80px;
@@ -77,16 +86,14 @@ caption{
 
 .carousel{
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 3fr 1fr;
 }
 
 .vechileCarousel{
     padding-top: 80px;
 }
 
-.carSpecs{
-    width: 20vw;
-}
+
 
 .carImg{
     display: flex;
@@ -112,13 +119,20 @@ caption{
 }
 
 .carNameCarousel{
-   margin-right: 270px;
    text-shadow: 4px 4px rgba(189, 195, 199, 0.3)
+}
 
+#Polo{
+    margin-top: 5px;
 }
 
 .specPrice{
-    font-size: 25px;
+    font-size: 16px;
+}
+
+.thumbnail img{
+    max-width: 100%;
+    height:100%;
 }
 
 .FAQTitle{
@@ -167,6 +181,7 @@ caption{
   width:auto;
 }
 
+
 .emailSentBtn:disabled, .formSubmitBtn:disabled{
     background-color: 	rgb(169,169,169, 0.5)
 }
@@ -191,14 +206,82 @@ caption{
     text-decoration: underline solid #FF8210 3px;
 }
 
+
+@media (max-width: 1075px) and (min-width: 1024px) {
+    .searchBarInputs, .formSubmitBtn{
+        width: 230px;
+    }
+}
 @media (max-width: 1024px) and (min-width: 800px) {
     .inputFormLabel{
-        margin-left: 20px;
-        margin-bottom:5px;
-        margin-top:5px;
-        font-size:18px;
+        margin-left:0px;
     }
+    #carLabel{
+        margin-left: 0px;
+    }
+    
+    #dropOffDestLabel,#pickUpDestLabel{
+        margin-left:0px;
+    }
+
+    .searchBarInputs{
+        font-size: 11px;
+    }
+    /* .processes {
+        margin-top:100px;
+    }
+    .iconWrapper{
+        margin-left: 110px;
+        margin-bottom: 30px;
+    } */
+    
     }
 
 @media (max-width: 800px) {
+    .inputFormLabel{
+        font-size: 12px;
+    }
+    .searchBarInputs{
+        font-size: 9px;
+    }
+
+    /* .processes{
+        margin-top: 100px;
+    }
+    .iconWrapper{
+        margin-left: 110px;
+        margin-bottom: 30px;
+    } */
 }
+@media (mix-width: 767px) {
+/* .iconWrapper{
+    margin-top: 300px;
+    margin-left: 110px;
+    margin-bottom: 30px;
+} */
+}
+
+@media (max-width: 767px) {
+    .searchBarInputs{
+   width: 92vw;
+    }
+
+    /* .processes{
+        margin-top: 550px;
+    }
+    .iconWrapper{
+        margin-left: 90px;
+        margin-bottom: 30px;
+    } */
+}
+@media (min-width: 768px) {
+    .processes{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        /* gap: 20px; */
+        margin-top: 100px;
+        place-items:normal;
+    }
+}
+

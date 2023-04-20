@@ -31,9 +31,9 @@ function TestimonalCard() {
   return (
     <>
       <div className="testimonials">
-        <h1 className='testimonialHeading text-5xl font-bold my-8 text-center'>Testimonials</h1>
+        <h1 className='testimonialHeading text-3xl font-bold my-8 text-center'>Testimonials</h1>
         <h2 className='testimonialSubheading text-2xl font-semibold text-center'>Hear from some of our happy customers...</h2>
-        <div className='allReviews grid grid-cols-2 md:grid-cols-3 gap-4 w-full p-5 mb-6'>
+        <div className='allReviews grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full p-5 mb-6'>
           {customerReviews.map((review) =>
             <blockquote className=" individualReview bg-gray-100 p-8 h-100  ">
               <div className="flex items-center gap-4 viewedReview">

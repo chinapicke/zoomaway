@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLaptop } from '@fortawesome/free-solid-svg-icons'
 import CustomerService from '../assets/images/customerservice.png'
 import getKeys from '../assets/images/getkeys.png'
+import Laptop from '../assets/images/laptop.png'
 
 
 
@@ -10,14 +11,14 @@ function AboutIcons() {
   return (
     <div className='processes'>
       <div className='onlineSelect '>
-        <div className='iconWrapper pb-4' id='laptopWrapper'>
-          <FontAwesomeIcon icon={faLaptop} className='aboutIcon w-12 h-10' style={{ color: "#000000", }} id='laptopIcon' />
+        <div className='iconWrapper pb-4 ' id='laptopWrapper'>
+          <img className='aboutIcon w-24 h-24 ' src={Laptop} alt="Laptop Icon" id='laptopIcon' />
         </div>
         <h1 className='homepageSteps underline underline-offset-2'>Step 1</h1>
         <p className='stepsText'>Select a car to rent with specific locations and times to pick-up and drop off.</p>
         <p className='stepsText'>Recieve an email with 1 hour to confirm your enquiry.</p>
       </div>
-      <div className='callRepresentative ml-4'>
+      <div className='callRepresentative  lg:ml-4'>
         <div className='iconWrapper' id='representativeWrapper'>
           <img className='aboutIcon w-24 h-24 ' src={CustomerService} alt="Customer Service Icon" id='representativeIcon' />
         </div>
