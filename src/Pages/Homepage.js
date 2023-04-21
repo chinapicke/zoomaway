@@ -103,7 +103,8 @@ function Homepage() {
         </div>
       </div>
       <div className='FAQsection'>
-      <h1 className='FAQTitle text-4xl font-bold pt-5 text-center mb-10 lg:tex-5xl'>Frequently Asked Questions</h1>
+      <h1 className='FAQTitle text-4xl font-bold pt-5 text-center mb-5 lg:tex-5xl'>Frequently Asked Questions</h1>
+      <p className='FAQSubinfo mb-8 text-base font-semibold text-center'>Have a look at some of the frequent questions we get asked at ZoomAway. If none of your questions are answered by the below, please contact us throughout our contact page.</p>
         <div className='FAQwrapper mb-5'>
           <div>
             <img src={QuestionMark} alt='Question mark' className='questionMark w-32 h-32' />
