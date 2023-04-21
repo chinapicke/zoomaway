@@ -33,7 +33,7 @@ function Navbar() {
             onClick={()=>setOpenRegister(true)}
             >Register
             </button>
-            {openRegister && <Register/>}
+            {openRegister && <Register closeRegisteration={setOpenRegister}/>}
 
           </div>
           <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1 " id="menu-default">
