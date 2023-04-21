@@ -203,12 +203,9 @@ caption {
     text-decoration: underline solid #FF8210 3px;
 }
 
-
-/* @media (max-width: 1075px) and (min-width: 1024px) {
-    .searchBarInputs, .formSubmitBtn{
-        width: 230px;
-    }
-} */
+.ageEmailModal{
+    width:90% 
+}
 @media (max-width: 1024px) and (min-width: 800px) {
     .inputFormLabel {
         margin-left: 0px;
@@ -239,6 +236,10 @@ caption {
     .textBannerText {
         padding-top: 30px;
         font-size: 30px;
+    }
+
+    .lName{
+        margin-bottom: 10px;
     }
 }
 
@@ -275,6 +276,18 @@ caption {
 
     .specPrice {
         font-size: 22px;
+    }
+
+    .emailInput{
+        margin-left: 5px;
+    }
+
+    .modalForm{
+        margin-left:5px;
+    }
+
+    .fNameInput, .age{
+        margin-left:8px;
     }
 
 }

@@ -23,7 +23,7 @@ function Navbar() {
             <span className=" zoomText self-center text-md font-semibold whitespace-nowrap"><span className='logoZoomText'>Zoom</span>Away</span>
           </a>
           <div className="flex items-center lg:order-2 ">
-            <a href="#" className="signUpBtn font-medium rounded-lg text-sm lg:text-lg mr-2 lg:px-2 lg:py-2 md:px-2 md:py-2 px-1 py-1" id='signupBtn'>Sign up</a>
+            <a href="#" className="signUpBtn font-medium rounded-lg text-sm lg:text-lg mr-2 lg:px-2 lg:py-2 md:px-2 md:py-2 px-1 py-1" id='signupBtn'>Sign in</a>
             <a href="#" className="registerBtn focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm lg:text-lg lg:px-2 lg:py-2 md:px-2 md:py-2 px-1 py-1">Register</a>
           </div>
           <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1 " id="menu-default">
