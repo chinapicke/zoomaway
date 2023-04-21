@@ -17,7 +17,7 @@ function Contact() {
                         <li className="mb-4">
                             <a href="#" className="hover:underline"><span className='pr-2'><FontAwesomeIcon icon={faPhone} style={{ color: '#FF8210' }} /></span>0208 123 4567</a>
                         </li>
-                        <li className="mb-4">
+                        <li className="mb-4 ml-1">
                             <a href="#" className="hover:underline"><span className='pr-2'><FontAwesomeIcon icon={faEnvelope} style={{ color: '#FF8210' }} /></span>zoomaway@gmail.com</a>
                         </li>
                     </ul>
@@ -38,7 +38,7 @@ function Contact() {
                                     <label for="message" className="block mb-2 text-sm font-medium ">Your message</label>
                                     <textarea id="message" rows="6" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 d" placeholder="Leave a comment..."></textarea>
                                 </div>
-                                <div className='flex'>
+                                <div className='flex justify-end'>
                                     <button type="submit" className="messageBtn py-3 px-5 text-sm font-medium rounded-lg ">Send message</button>
                                 </div>
                             </form>
