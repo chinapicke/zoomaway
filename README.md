@@ -1,4 +1,4 @@
-#ZoomAway
+# ZoomAway
 
 ![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
   
@@ -22,7 +22,7 @@
   ## Usage
   Website is deployed using Netlify.
   Users can interact with the page by clicking buttons to go to different links and interact with form submission.
-  ![img](https://drive.google.com/file/d/1-ZKo_Pu2WEO9Rt0jDKBqDolDOzRcO669/view)
+  ![image](https://drive.google.com/file/d/1-ZKo_Pu2WEO9Rt0jDKBqDolDOzRcO669/view)
 
   ## Contributions
   No
