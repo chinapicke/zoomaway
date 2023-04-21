@@ -2,6 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
+import QuestionMark from '../assets/images/questionmak.png'
 
 
 const FAQquestions = [
@@ -41,7 +42,7 @@ function FAQ() {
         <h1 className='FAQTitle text-3xl font-bold pt-5 text-center '>Frequently Asked Questions</h1>
             <div className='FAQwrapper h-80 grid grid-cols-2 mb-5'>
                 <div>
-                    <img src='http://clipart-library.com/new_gallery/135-1358536_index-of-transparent-background-question-mark-icon.png' alt='Question mark' className='questionMark '/>
+                    <img src={QuestionMark} alt='Question mark' className='questionMark'/>
                 </div>
                 <div className='accordion w-2/3'>
                     {FAQquestions.map((item, i) =>

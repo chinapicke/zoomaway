@@ -7,6 +7,7 @@ import VechileCarousel from '../components/VechileCarousel'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
+import QuestionMark from '../assets/images/questionmak.png'
 
 
 const FAQquestions = [
@@ -105,7 +106,7 @@ function Homepage() {
       <h1 className='FAQTitle text-4xl font-bold pt-5 text-center mb-10 lg:tex-5xl'>Frequently Asked Questions</h1>
         <div className='FAQwrapper mb-5'>
           <div>
-            <img src='http://clipart-library.com/new_gallery/135-1358536_index-of-transparent-background-question-mark-icon.png' alt='Question mark' className='questionMark w-32 h-32' />
+            <img src={QuestionMark} alt='Question mark' className='questionMark w-32 h-32' />
           </div>
           <div className='accordion w-full'>
             {FAQquestions.map((item, i) =>

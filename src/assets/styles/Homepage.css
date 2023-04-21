@@ -321,7 +321,7 @@ caption {
         padding: 0px 20px 0px 20px;
     }
 
-    .carSpecs{
+    .carSpecs {
         width: 22vw;
     }
 
@@ -329,13 +329,17 @@ caption {
         font-size: 30px;
     }
 
-    tbody{
+    tbody {
         font-size: 30px;
     }
-}
-@media (min-width: 1200px) {
-    .pickCar{
-        row-gap: 30px;
+
+    .questionMark {
+        padding-left: 20px;
     }
 }
 
+@media (min-width: 1200px) {
+    .pickCar {
+        row-gap: 30px;
+    }
+}
