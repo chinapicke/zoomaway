@@ -1,0 +1,358 @@
+/* Input and homepage img */
+.heroBackground {
+    background-image: url(../images/bwcar.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 999px;
+}
+
+.selectCarForm {
+    position: relative;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    top: 70px;
+    border-radius: 5px;
+    background-color: #FF8210;
+    box-shadow: 20px yellow;
+}
+
+.validationText {
+    text-align: center;
+    padding-bottom: 5px;
+    font-size: 12px;
+    word-break: break-word;
+    font-family: "Lucida Console", "Courier New", monospace;
+    padding-top: 3px;
+    font-weight: 599;
+}
+
+/* About section */
+.aboutIcon {
+    padding: 15px;
+}
+
+.processes {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    place-items: center;
+    margin: 70px 20px 0px 20px;
+}
+
+.aboutIcon {
+    display: inline;
+    background-color: #FF8210;
+    border-radius: 30% 70% 58% 42% / 30% 30% 70% 70%;
+}
+
+.iconWrapper {
+    margin-top: 30px;
+    /* margin-left: 120px; */
+    margin-bottom: 30px;
+    display: inline;
+    justify-content: center;
+}
+
+.onlineSelect,
+.callRepresentative {
+    margin-bottom: 10px;
+}
+
+
+
+.textBanner {
+    margin-top: 80px;
+    background-color: black;
+    color: white;
+    height: 200px;
+}
+
+tbody {
+    border: 2px solid black;
+}
+
+tr {
+    border-bottom: 1px solid black;
+}
+
+caption {
+    background-color: #FF8210;
+}
+
+.carousel {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.vechileCarousel {
+    padding-top: 80px;
+}
+
+
+
+.carImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pickCar {
+    justify-content: center;
+}
+
+.spanOrange {
+    color: #FF8210;
+}
+
+.homepageSteps {
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: 650;
+}
+
+.stepsText {
+    font-size: 16px;
+}
+
+.carNameCarousel {
+    text-shadow: 4px 4px rgba(189, 195, 199, 0.3)
+}
+
+#Polo {
+    margin-top: 5px;
+}
+
+.specPrice {
+    font-size: 16px;
+}
+
+.thumbnail img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.FAQTitle {
+    text-shadow: 4px 4px rgba(189, 195, 199, 0.3)
+}
+
+.formSubmitBtn {
+    margin-top: 10px;
+}
+
+.searchBarInputs {
+    font-size: 16px;
+    font-weight: 500;
+    width: 85vw;
+}
+
+.inputFormLabel {
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 25px;
+}
+
+
+
+.modalPopup {
+    color: black;
+}
+
+.wasPicked {
+    column-count: 2;
+}
+
+.email {
+    width: 92%;
+}
+
+.modalImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+
+.emailSentBtn:disabled,
+.formSubmitBtn:disabled {
+    background-color: rgb(169, 169, 169, 0.5)
+}
+
+.formSubmitBtn:hover {
+    outline: 4px solid black;
+    outline-offset: 3px;
+}
+
+.formSubmitBtn:hover:disabled {
+    outline: 0px;
+}
+
+.aboutHomepage {
+    width: 100%;
+}
+
+.mobileItems {
+    width: 100%;
+}
+
+.mobileItems li:hover {
+    text-decoration: underline solid #FF8210 3px;
+}
+
+.ageEmailModal{
+    width:90% 
+}
+@media (max-width: 1024px) and (min-width: 800px) {
+    .inputFormLabel {
+        margin-left: 0px;
+    }
+
+    #carLabel {
+        margin-left: 0px;
+    }
+
+    #dropOffDestLabel,
+    #pickUpDestLabel {
+        margin-left: 0px;
+    }
+
+    .searchBarInputs {
+        font-size: 11px;
+    }
+
+
+}
+
+@media (min-width: 640px) and (max-width:767px) {
+    .searchBarInputs {
+        margin-right: 10px;
+        width: 92vw;
+    }
+
+    .textBannerText {
+        padding-top: 30px;
+        font-size: 30px;
+    }
+
+    .lName{
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .searchBarInputs {
+        width: 30vw;
+    }
+
+    .formSubmitBtn {
+        margin-top: 40px;
+    }
+
+    .heroBackground {
+        height: 700px;
+    }
+
+    .selectCarForm {
+        top: 150px;
+    }
+
+    .processes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        /* gap: 20px; */
+        margin-top: 100px;
+        place-items: normal;
+    }
+
+    .textBannerText {
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+
+    .specPrice {
+        font-size: 22px;
+    }
+
+    .emailInput{
+        margin-left: 5px;
+    }
+
+    .modalForm{
+        margin-left:5px;
+    }
+
+    .fNameInput, .age{
+        margin-left:8px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .searchBarInputs {
+        margin-left: 5px;
+        width: 20vw;
+    }
+
+    .validationText {
+        width: 220px;
+    }
+
+    .heroBackground {
+        height: 600px;
+    }
+
+    .selectCarForm {
+        top: 280px;
+    }
+
+    .textBannerText {
+        padding-top: 30px;
+        padding-bottom: 10px;
+        font-size: 45px;
+    }
+
+    .formSubmitBtn {
+        margin-top: 40px;
+        width: 20vw;
+    }
+
+    .inputFormLabel {
+        font-size: 20px;
+    }
+
+    .carousel {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .specsTable {
+        padding: 0px 20px 0px 20px;
+    }
+
+    .carSpecs {
+        width: 22vw;
+    }
+
+    .specPrice {
+        font-size: 30px;
+    }
+
+    tbody {
+        font-size: 30px;
+    }
+
+    .questionMark {
+        padding-left: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pickCar {
+        row-gap: 30px;
+    }
+}

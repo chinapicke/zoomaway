@@ -1,0 +1,60 @@
+.photo{
+    width:40vw;
+    height:40vh;
+}
+
+.indiviCar{
+    border: 5px solid black;
+    box-shadow: 5px 5px gray;
+}
+
+.bookBtn{
+    margin-left: 50px;
+    font-size: large;
+    background-color: #FF8210;
+}
+
+.carPrice{
+    position: relative;
+    left: 180px;
+    bottom: 50px;
+    font-size: 30px;
+}
+
+.carInfo{
+    font-size: 15px;
+}
+
+.vechilePgTitle{
+    text-shadow: 4px 4px rgba(189, 195, 199, 0.3)
+}
+
+.carNameCarousel{
+text-align: center;
+}
+
+.carName{
+    font-size: 25px;
+}
+
+@media (min-width: 640px) and (max-width:767px) {
+    .bookBtn {
+        margin-left: 55px;
+    }
+}
+
+@media (min-width: 768px) {
+    .bookBtn {
+        margin-left: 70px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .bookBtn {
+        margin-left: 50px;
+    }
+
+    .carInfo{
+        font-size: 18px;
+    }
+}

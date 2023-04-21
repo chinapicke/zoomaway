@@ -1,0 +1,57 @@
+.logoZoomText{
+    color: #FF8210;
+}
+
+span{
+    font-weight: 750;
+}
+
+.signUpBtn{
+    background-color:rgba(255,130,16, 0.85);
+}
+
+.registerBtn{
+    border: black solid 2px;
+}
+
+.registerInner{
+    background-color:#101010;
+}
+
+.registerForm{
+    background-color: #FF8210;
+}
+
+.validationTextRegister{
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size:13px;
+    padding-top: 10px
+}
+@media (min-width: 640px) and (max-width:767px) {
+    .registerBtn,.signUpBtn{
+        padding:10px;
+    }
+    .mobileBarIcon{
+        padding-top: 3px;
+        font-size: 30px;
+    }
+}
+@media (min-width: 768px) {
+    .registerBtn,.signUpBtn{
+        padding: 10px;
+        font-size:20px;
+    }
+    .mobileBarIcon{
+        padding-top: 8px;
+        font-size: 25px;
+    }
+    .zoomText, .logoZoomText{
+        font-size:25px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width:1060px) {
+    .zoomText, .logoZoomText{
+        font-size:18px;
+    }
+}

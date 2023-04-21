@@ -1,0 +1,11 @@
+.contactPgTitle{
+    text-shadow: 4px 4px rgba(189, 195, 199, 0.3)
+}
+
+.contactDetails{
+    margin-top: 70px;
+}
+
+.messageBtn{
+    background-color:rgba(255,130,16, 0.85);
+}
