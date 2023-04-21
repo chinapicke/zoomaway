@@ -137,7 +137,7 @@ function SearchBar() {
   const minDate = (moment().format("YYYY-MM-DD"))
 
   return (
-    <form className="selectCarForm grid lg:gap-x-0.5 lg:grid-cols-4 md:grid-cols-3 sm:grid-col-1 sm:gap-x-0" >
+    <form className="selectCarForm grid lg:gap-x-0.5 lg:grid-cols-4 md:grid-cols-3 sm:grid-col-1 sm:gap-x-0 z-0" >
       <div>
         <div>
           <label className="inputFormLabel block"

@@ -6,10 +6,15 @@ import { Link } from 'react-router-dom';
 import '../assets/styles/Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Register from '../components/Register'
 
 function Navbar() {
-
+  // mobile hamburger menu
   const [mobileOpen, setMobileOpen] = useState(false)
+
+  // register modal
+  const [openRegister, setOpenRegister]=useState(false)
+
 
   const openDropdown = () => {
     setMobileOpen(current => !current);
@@ -24,7 +29,12 @@ function Navbar() {
           </a>
           <div className="flex items-center lg:order-2 ">
             <a href="#" className="signUpBtn font-medium rounded-lg text-sm lg:text-lg mr-2 lg:px-2 lg:py-2 md:px-2 md:py-2 px-1 py-1" id='signupBtn'>Sign in</a>
-            <a href="#" className="registerBtn focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm lg:text-lg lg:px-2 lg:py-2 md:px-2 md:py-2 px-1 py-1">Register</a>
+            <button className="registerBtn focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm lg:text-lg lg:px-2 lg:py-2 md:px-2 md:py-2 px-1 py-1" 
+            onClick={()=>setOpenRegister(true)}
+            >Register
+            </button>
+            {openRegister && <Register/>}
+
           </div>
           <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1 " id="menu-default">
             <ul className='navbarItems flex flex-col mt-4 text-lg font-medium md:flex-row md:space-x-8 md:mt-0 '>
