@@ -39,7 +39,7 @@ function Navbar() {
               )}
             </ul>
           </div>
-          <div className='mobileBarIcon lg:hidden md:block sm:block pt-2' onClick={openDropdown}>
+          <div className='mobileBarIcon lg:hidden md:block sm:block pt-4' onClick={openDropdown}>
             <FontAwesomeIcon icon={faBars} size="xl"/>
           </div>
           {mobileOpen?

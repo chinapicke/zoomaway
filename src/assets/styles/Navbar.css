@@ -19,7 +19,7 @@ span{
         padding:10px;
     }
     .mobileBarIcon{
-        padding-top: 0px;
+        padding-top: 3px;
         font-size: 30px;
     }
 }
@@ -29,10 +29,16 @@ span{
         font-size:20px;
     }
     .mobileBarIcon{
-        padding-top: 0px;
+        padding-top: 8px;
         font-size: 25px;
     }
     .zoomText, .logoZoomText{
-        font-size:30px;
+        font-size:25px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width:1060px) {
+    .zoomText, .logoZoomText{
+        font-size:18px;
     }
 }

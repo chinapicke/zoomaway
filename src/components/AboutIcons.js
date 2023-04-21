@@ -1,6 +1,4 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLaptop } from '@fortawesome/free-solid-svg-icons'
 import CustomerService from '../assets/images/customerservice.png'
 import getKeys from '../assets/images/getkeys.png'
 import Laptop from '../assets/images/laptop.png'
