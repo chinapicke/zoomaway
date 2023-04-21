@@ -22,7 +22,7 @@
   ## Usage
   Website is deployed using Netlify.
   Users can interact with the page by clicking buttons to go to different links and interact with form submission.
-  ![image](https://drive.google.com/file/d/1-ZKo_Pu2WEO9Rt0jDKBqDolDOzRcO669/view)
+  ![React App (2)](https://user-images.githubusercontent.com/117565899/233659229-ce0b74b1-766d-4068-b21a-e3ff78ac40c5.gif)
 
   ## Contributions
   No
