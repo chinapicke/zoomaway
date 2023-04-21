@@ -9,16 +9,15 @@
 }
 
 .bookBtn{
+    margin-left: 50px;
     font-size: large;
-    margin-left: 100px;
-    width:10vw;
     background-color: #FF8210;
 }
 
 .carPrice{
     position: relative;
-    left: 130px;
-    bottom: 42px;
+    left: 180px;
+    bottom: 50px;
     font-size: 30px;
 }
 
@@ -32,4 +31,30 @@
 
 .carNameCarousel{
 text-align: center;
+}
+
+.carName{
+    font-size: 25px;
+}
+
+@media (min-width: 640px) and (max-width:767px) {
+    .bookBtn {
+        margin-left: 55px;
+    }
+}
+
+@media (min-width: 768px) {
+    .bookBtn {
+        margin-left: 70px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .bookBtn {
+        margin-left: 50px;
+    }
+
+    .carInfo{
+        font-size: 18px;
+    }
 }
