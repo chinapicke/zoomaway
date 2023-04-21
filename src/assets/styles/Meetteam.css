@@ -17,3 +17,10 @@
 .meetPgTitle{
     text-shadow: 4px 4px rgba(189, 195, 199, 0.3)
 }
+
+@media (min-width: 640px) and (max-width:767px) {
+    .profileImg{
+        width:130px;
+        height:130px;
+    }
+}
